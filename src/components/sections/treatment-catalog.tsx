@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Sparkles, Syringe, SignalWave } from 'lucide-react';
+import { Sparkles, Syringe, Signal } from 'lucide-react';
 
 const treatments = [
   {
@@ -13,7 +13,7 @@ const treatments = [
     description: 'Smooth wrinkles, restore volume, and contour your features with premium dermal fillers for a refreshed look.',
   },
   {
-    icon: <SignalWave className="h-8 w-8 text-accent" />,
+    icon: <Signal className="h-8 w-8 text-accent" />,
     title: 'Radiofrequency Therapy',
     description: 'Non-invasive skin tightening and rejuvenation. Stimulate collagen for firmer, younger-looking skin.',
   },
