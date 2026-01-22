@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import placeholderData from '@/app/lib/placeholder-images.json';
 
 const cases = [
     {
@@ -11,8 +12,8 @@ const cases = [
         sectionDesc: "Interactúa con nuestra data clínica. Selecciona un caso de implante capilar y explora la diferencia en densidad, diseño de línea frontal y cobertura de coronilla tras el tratamiento.",
         title: "Implante Capilar Frontal Completo",
         description: "Paciente 40 años. Recesión marcada en entradas y disminución de densidad frontal. Se realiza implante capilar estratégico con diseño natural de la línea capilar y aumento uniforme de densidad.",
-        before: "https://images.unsplash.com/photo-1580798204642-0a284c5a7552?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        after: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        before: placeholderData.beforeAfterShowcase.cases[0].before.src,
+        after: placeholderData.beforeAfterShowcase.cases[0].after.src,
         recovery: "7-10 Días",
         durability: "Resultado Permanente",
         tags: ["Implante Capilar", "Línea Frontal", "Alta Densidad"]
@@ -22,8 +23,8 @@ const cases = [
         sectionDesc: "Protocolos combinados para restaurar volumen y luminosidad. Nuestros casos demuestran cómo pequeñas correcciones estratégicas logran un impacto global en la armonía del rostro.",
         title: "Diseño Labial Arquitectónico",
         description: "Paciente 28 años. Definición del filtro y restauración de volumen labial sutil. Enfoque en hidratación y proyección natural sin efecto de 'pato'.",
-        before: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        after: "https://images.unsplash.com/photo-1597586124394-fbd1ef2b4269?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        before: placeholderData.beforeAfterShowcase.cases[1].before.src,
+        after: placeholderData.beforeAfterShowcase.cases[1].after.src,
         recovery: "24-48 Horas",
         durability: "12 Meses",
         tags: ["Ácido Hialurónico", "Hidratación", "Perfilado"]
@@ -33,8 +34,8 @@ const cases = [
         sectionDesc: "Redefinición del óvalo facial y masculinización sin cirugía. Utilizando inductores de colágeno para proyectar mentón y definir la mandíbula con resultados duraderos.",
         title: "Perfilado Mandibular",
         description: "Paciente 35 años. Definición del ángulo mandibular y reducción de la papada. Resultado: perfil más definido y cuello estilizado.",
-        before: "https://images.unsplash.com/photo-1619946794135-5bc917a27793?q=80&w=2580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        after: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        before: placeholderData.beforeAfterShowcase.cases[2].before.src,
+        after: placeholderData.beforeAfterShowcase.cases[2].after.src,
         recovery: "48 Horas",
         durability: "18 Meses",
         tags: ["Radiesse", "Lifting", "Definición"]
@@ -81,33 +82,17 @@ export function BeforeAfterShowcase() {
         <section className="py-24 bg-card" id="results">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="grid md:grid-cols-3 gap-6 mb-20">
-                    <div className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-video relative group">
-                        <iframe
-                            className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder1" title="Video 1"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen>
-                        </iframe>
-                    </div>
-                    <div className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-video relative group">
-                        <iframe
-                            className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder2" title="Video 2"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen>
-                        </iframe>
-                    </div>
-                    <div className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-video relative group">
-                        <iframe
-                            className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder3" title="Video 3"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen>
-                        </iframe>
-                    </div>
+                    {placeholderData.beforeAfterShowcase.featuredVideos.map((videoSrc, index) => (
+                         <div key={index} className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-video relative group">
+                            <iframe
+                                className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                                src={videoSrc} title={`Video ${index + 1}`}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen>
+                            </iframe>
+                        </div>
+                    ))}
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
@@ -139,7 +124,13 @@ export function BeforeAfterShowcase() {
                     <div className="lg:col-span-7">
                         <div ref={containerRef} className="analysis-container relative aspect-[4/3] rounded-2xl bg-secondary shadow-2xl overflow-visible group">
                             <div className="absolute inset-0 grayscale-[20%]">
-                                <Image src={currentCase.before} alt="Before treatment" fill style={{ objectFit: 'cover', borderRadius: '1rem' }} />
+                                <Image 
+                                    src={currentCase.before} 
+                                    alt="Before treatment" 
+                                    fill 
+                                    style={{ objectFit: 'cover', borderRadius: '1rem' }}
+                                    data-ai-hint={placeholderData.beforeAfterShowcase.cases[activeCaseIndex].before.hint}
+                                />
                             </div>
                             <div className="after-overlay" style={{ backgroundImage: `url(${currentCase.after})` }}></div>
                             <div className="lens-ring">

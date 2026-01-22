@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
+import placeholderData from '@/app/lib/placeholder-images.json';
 
 const services = [
     {
@@ -19,10 +20,7 @@ const services = [
         contra: "Enfermedades autoinmunes activas en el cuero cabelludo, cicatrización queloide severa o zona donante insuficiente.",
         aftercare: ["No frotar la zona injertada los primeros 10 días", "Evitar ejercicio físico intenso durante 2 semanas", "Uso de champú neutro especial", "Evitar exposición solar directa prolongada"],
         icon: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6a6 6 0 0 0-6 6c0 2.22 1.21 4.15 3 5.19l1-1.74A4 4 0 0 1 8 12a4 4 0 0 1 4-4z"/></svg>,
-        cases: [
-            { b: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&q=80&w=800", a: "https://images.unsplash.com/photo-1503910321442-7f2bc9adbb2f?auto=format&fit=crop&q=80&w=800", label: "Zona Frontal" },
-            { b: "https://images.unsplash.com/photo-1615394200638-34986fc0d099?auto=format&fit=crop&q=80&w=800", a: "https://images.unsplash.com/photo-1527371285272-823b146740c0?auto=format&fit=crop&q=80&w=800", label: "Coronilla" }
-        ]
+        cases: placeholderData.procedures.services.find(s => s.id === 'implante')?.cases || []
     },
     {
         id: 'meso_capilar',
@@ -40,9 +38,7 @@ const services = [
         contra: "Infecciones activas en cuero cabelludo, embarazo o lactancia.",
         aftercare: ["No lavar el cabello en las siguientes 12 horas", "Evitar saunas o piscinas el día del tratamiento", "Masajear suavemente la zona para distribuir el producto"],
         icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 2.67-2 3.5 0 1.21.79 2 2 2 .83 0 2.24-.5 3.5-2"/><path d="m10 10 5.66 5.66"/><path d="M14 6l5.66 5.66"/><path d="m18 2 4 4"/><path d="m5 17 14.5-14.5"/><path d="m15.83 17.17 1.67 1.67"/><path d="m13.17 19.83 1.67 1.67"/></svg>,
-        cases: [
-            { b: "https://images.unsplash.com/photo-1615394191378-02f5a6064070?auto=format&fit=crop&q=80&w=800", a: "https://images.unsplash.com/photo-1576091160550-2173bdb999ef?auto=format&fit=crop&q=80&w=800", label: "Densificación" }
-        ]
+        cases: placeholderData.procedures.services.find(s => s.id === 'meso_capilar')?.cases || []
     },
     {
         id: 'hialuronico',
@@ -60,9 +56,7 @@ const services = [
         contra: "Enfermedades autoinmunes sistémicas, alergia a componentes o rellenos permanentes previos en la misma zona.",
         aftercare: ["No realizar ejercicio físico el día de la infiltración", "Evitar masajes fuertes en la zona", "No aplicar calor extremo (sauna)", "Dormir boca arriba las primeras 2 noches"],
         icon: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>,
-        cases: [
-            { b: "https://images.unsplash.com/photo-1596704016754-080c60124b13?auto=format&fit=crop&q=80&w=800", a: "https://images.unsplash.com/photo-1594465919760-441fe5908ab0?auto=format&fit=crop&q=80&w=800", label: "Perfilado Labial" }
-        ]
+        cases: placeholderData.procedures.services.find(s => s.id === 'hialuronico')?.cases || []
     },
     {
         id: 'botox',
@@ -80,9 +74,7 @@ const services = [
         contra: "Miastenia gravis, embarazo, infecciones en el punto de inyección.",
         aftercare: ["No tumbarse ni agachar la cabeza durante 4 horas", "No hacer deporte intenso en 24h", "No masajear la zona tratada", "Evitar cascos de moto o gorras apretadas"],
         icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 12.33a2.66 2.66 0 0 0 0 3.76l2.12 2.12a2.66 2.66 0 0 0 3.76 0l8.47-8.47"/><path d="m15 11 4 4"/><path d="m19 15 3.5 3.5"/><path d="m11 7 4 4"/><path d="m20 2 2 2"/></svg>,
-        cases: [
-            { b: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800", a: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800", label: "Tercio Superior" }
-        ]
+        cases: placeholderData.procedures.services.find(s => s.id === 'botox')?.cases || []
     },
     {
         id: 'criolipolisis',
@@ -100,9 +92,7 @@ const services = [
         contra: "Crioglobulinemia, enfermedad de Raynaud, hernias en la zona de tratamiento, embarazo.",
         aftercare: ["Beber 2 litros de agua diarios", "Realizar drenaje linfático o masajes", "Llevar una dieta equilibrada para potenciar el efecto", "Uso de faja compresora opcional"],
         icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>,
-        cases: [
-            { b: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800", a: "https://images.unsplash.com/photo-1519824141121-997437a91bf9?auto=format&fit=crop&q=80&w=800", label: "Abdomen Inferior" }
-        ]
+        cases: placeholderData.procedures.services.find(s => s.id === 'criolipolisis')?.cases || []
     }
 ];
 
@@ -127,7 +117,8 @@ export function Procedures() {
     }, [sliderValue]);
     
     const openModal = (index: number) => {
-        const globalIndex = services.findIndex(s => s.id === services[index].id);
+        const serviceId = (categories.capilar.concat(categories.facial, categories.corporal)[index]).id;
+        const globalIndex = services.findIndex(s => s.id === serviceId);
         setCurrentIndex(globalIndex);
         setCurrentCaseIndex(0);
         setSliderValue(50);
@@ -150,10 +141,10 @@ export function Procedures() {
     };
 
     const currentService = services[currentIndex];
-    const currentCase = currentService?.cases[currentCaseIndex];
+    const currentCase = currentService?.cases?.[currentCaseIndex];
 
-    const ServiceCard = ({ service, index } : { service: typeof services[0], index: number}) => (
-        <div className="card bg-[hsla(var(--card),0.95)] border border-[hsla(var(--accent-soft),0.8)] rounded-[32px] p-10 text-left backdrop-blur-xl shadow-lg transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col cursor-pointer relative overflow-hidden hover:-translate-y-2.5 hover:shadow-2xl hover:border-[var(--accent-procedures)]" onClick={() => openModal(index)}>
+    const ServiceCard = ({ service, index, globalIndex } : { service: typeof services[0], index: number, globalIndex: number}) => (
+        <div className="card bg-[hsla(var(--card),0.95)] border border-[hsla(var(--accent-soft),0.8)] rounded-[32px] p-10 text-left backdrop-blur-xl shadow-lg transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col cursor-pointer relative overflow-hidden hover:-translate-y-2.5 hover:shadow-2xl hover:border-[var(--accent-procedures)]" onClick={() => openModal(globalIndex)}>
             <div className="flex justify-between items-start mb-6">
                 <div className="w-16 h-16 bg-[var(--accent-soft)] rounded-[20px] flex items-center justify-center transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] text-[var(--accent-procedures)] group-hover:bg-[var(--accent-procedures)] group-hover:text-white group-hover:rotate-6">
                     <div className="w-6 h-6">{service.icon}</div>
@@ -201,21 +192,21 @@ export function Procedures() {
 
                 <h2 className="section-title">Soluciones Capilares</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-                    {categories.capilar.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
+                    {categories.capilar.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
                 </div>
 
                 <h2 className="section-title">Cuidado Facial</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-                    {categories.facial.map((s, i) => <ServiceCard key={s.id} service={s} index={categories.capilar.length + i} />)}
+                    {categories.facial.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
                 </div>
 
                 <h2 className="section-title">Remodelación Corporal</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-                    {categories.corporal.map((s, i) => <ServiceCard key={s.id} service={s} index={categories.capilar.length + categories.facial.length + i} />)}
+                    {categories.corporal.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
                 </div>
             </div>
 
-            {modalOpen && (
+            {modalOpen && currentService && (
                  <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-xl flex items-center justify-center z-[1000] transition-opacity duration-300" onClick={closeModal}>
                     <div className="bg-white w-[95%] max-w-7xl rounded-[40px] relative max-h-[95vh] overflow-hidden flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]" onClick={(e) => e.stopPropagation()}>
                         <div className="absolute top-6 right-6 flex gap-2.5 z-50">
@@ -245,8 +236,8 @@ export function Procedures() {
                                                 <span className="absolute bottom-6 right-6 py-2 px-4 bg-black/50 backdrop-blur-sm rounded-full text-xs font-bold uppercase tracking-widest text-white z-20 pointer-events-none">Antes</span>
                                                 <span className="absolute bottom-6 left-6 py-2 px-4 bg-white/80 backdrop-blur-sm rounded-full text-xs font-bold uppercase tracking-widest text-gray-800 z-20 pointer-events-none">Después</span>
                                             </div>
-                                            <div className="text-center mt-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wider">{currentCase.label} {currentService.cases.length > 1 ? `(Caso ${currentCaseIndex + 1})` : ''}</div>
-                                            {currentService.cases.length > 1 && (
+                                            <div className="text-center mt-2.5 text-xs font-semibold text-slate-500 uppercase tracking-wider">{currentCase.label} {currentService.cases && currentService.cases.length > 1 ? `(Caso ${currentCaseIndex + 1})` : ''}</div>
+                                            {currentService.cases && currentService.cases.length > 1 && (
                                                 <div className="flex justify-center gap-3 mt-4">
                                                     {currentService.cases.map((_, idx) => (
                                                         <div key={idx} onClick={() => setCurrentCaseIndex(idx)} className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-all ${idx === currentCaseIndex ? 'bg-[var(--accent-procedures)] w-6' : 'bg-gray-300'}`}></div>

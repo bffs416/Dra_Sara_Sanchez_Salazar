@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import placeholderData from '@/app/lib/placeholder-images.json';
 
 export function Hero() {
   return (
@@ -11,9 +12,10 @@ export function Hero() {
             <Image 
               alt="Professional medical portrait of Dr. Sara Sanchez" 
               className="grayscale hover:grayscale-0 transition-all duration-700" 
-              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={placeholderData.hero.doctorPortrait.src}
               fill
               style={{ objectFit: 'cover' }}
+              data-ai-hint={placeholderData.hero.doctorPortrait.hint}
             />
           </div>
           <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-xl border max-w-[240px]">

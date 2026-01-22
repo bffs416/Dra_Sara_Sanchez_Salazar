@@ -2,8 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import placeholderData from '@/app/lib/placeholder-images.json';
 
-const GalleryCard = ({ before, after, title, description, tags, delay }: { before: string, after: string, title: string, description: string, tags: string[], delay: string }) => {
+const GalleryCard = ({ before, after, title, description, tags, delay, beforeHint, afterHint }: { before: string, after: string, title: string, description: string, tags: string[], delay: string, beforeHint: string, afterHint: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -40,10 +41,10 @@ const GalleryCard = ({ before, after, title, description, tags, delay }: { befor
   return (
     <div className="group fade-in" style={{ animationDelay: delay }}>
       <div ref={containerRef} className="analysis-container aspect-[4/5] bg-pearl-gray mb-6 shadow-xl">
-        <div className="absolute inset-0 bg-cover bg-center transition-opacity duration-500" style={{ backgroundImage: `url('${before}')` }}>
+        <div data-ai-hint={beforeHint} className="absolute inset-0 bg-cover bg-center transition-opacity duration-500" style={{ backgroundImage: `url('${before}')` }}>
           <span className="absolute top-4 left-4 bg-black/40 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Antes</span>
         </div>
-        <div className="after-overlay" style={{ backgroundImage: `url('${after}')` }}></div>
+        <div data-ai-hint={afterHint} className="after-overlay" style={{ backgroundImage: `url('${after}')` }}></div>
         <div className="lens-ring">
           <span className="lens-ui">Después</span>
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full mb-2">
@@ -68,48 +69,36 @@ const GalleryCard = ({ before, after, title, description, tags, delay }: { befor
 
 const galleryCases = [
     {
-        before: "https://lh3.googleusercontent.com/aida-public/AB6AXuA4AKwIxTx1jemgOIt5v604UQ1575QypZN1DOj-CWsZC7LRabPniM8BDb1EWydsVnJr2LYVPVCTocaHkvq-YTlSmaIi130_YXbPrNKxe7QsRZCnSBn_KCGlyU-ng1aScyAmenVuLpDHhzzR3jTJbn9nZQn_tNtcOJiNGW-2NvWInj7B-emP6rVmKC8y21TRft47rZvfxABmz_4yV897f7wx0hxi-eacGDbK3VDYsQ7bCh-LpiZUhPteP3Eqcc3m-YmHVzr1Rjx2k1A",
-        after: "https://placehold.co/600x800/1A1A1A/e9edf1?text=DESPU%C3%89S:+Resultado+Final&font=playfair-display",
         title: "Restauración Facial",
         description: "Recuperación de volumen en tercio medio y tratamiento de ojeras.",
         tags: ["Rellenos", "Lifting"],
         delay: "0.1s"
     },
     {
-        before: "https://lh3.googleusercontent.com/aida-public/AB6AXuAzYYkeph2zSVE2miWsJQ9osLJWKP1JBmpknMK2Ue4VpsmQ2xR9wLgZ2kyoHSs1k8GlMU_6tbXouH4t7Cn9OlsmnW9R53Tvf3ewxJ1doyp6pZe44JNK9W8ienGnLo9XsGCjhNOUeM22QzHg1q4yI8mYhtgWsrk8l59DwZ12Q0sPMRnwvAQYl2oD67Un1PLeotOrSMPKm4L1hQWhd1kLUtcllZarr8RMletwkDzTsPPdw_XqajrEYsjDuMcXaIZLVMQ3wlREVeaZM7k",
-        after: "https://placehold.co/600x800/7F5589/ffffff?text=DESPU%C3%89S:+Labios+Hidratados&font=playfair-display",
         title: "Perfilado Labial",
         description: "Definición sutil e hidratación profunda sin exceso de volumen.",
         tags: ["Labios", "Hidratación"],
         delay: "0.2s"
     },
     {
-        before: "https://lh3.googleusercontent.com/aida-public/AB6AXuACWGEhodBGrCav9Ti9gG0h7UyBmNT5e-dVmzT1ef_PNHxnYuhCpEyVUAhdkTVChm2AYaQ3ejyv1K6uSZDNqde3C8YOOl2dEW9ZlqnXked0ygxrUHtQ35GGridWE7NJ8u10-LJSBtGxhvmqD9pH9VUoalIynpBfvv0W-Pf3Z9u9OCTaQWpwFZBv9AhzXkqELB41snan271z-NY-HnwLvxX9H-oIMJyrHwatoI4kHbxgvnXDnYr0wLwFIqrWBigMcPnodb0SPLK8CJM",
-        after: "https://placehold.co/600x800/B5A47C/ffffff?text=DESPU%C3%89S:+Piel+Luminosa&font=playfair-display",
         title: "Calidad de Piel",
         description: "Bio-estimulación para mejora de textura, poros y luminosidad.",
         tags: ["Piel", "Bio-Estimulación"],
         delay: "0.3s"
     },
     {
-        before: "https://lh3.googleusercontent.com/aida-public/AB6AXuBkK13l5_4exbugBS9hJFavu9jiBSS6nuKkyH0EEk-S_cM3x7dv4A5omOrKIbnSRfrwK3vMrI1bEdW2eU8h-K7pSldZpiqpUng4g5PF_imdxNgvhlQX_SBOku4khHa2hvGjpX1ZjlTn_10XVV-_WBHVgwec5tyxUsE6sgxr_lAp6KR2Qvk8jDndFraxZguWdEhd_rZ92XUSw7UpwJFKzRXvrAK-o-r9Nuoy74dnMHX21LN9wpz08Z5YAzIDRWRgGnSqiYdC0L2g7Qw",
-        after: "https://placehold.co/600x800/121212/ffffff?text=DESPU%C3%89S:+Mand%C3%ADbula+Definida&font=playfair-display",
         title: "Definición Mandibular",
         description: "Marcación del óvalo facial y reducción de flacidez en cuello.",
         tags: ["Mandíbula", "Radiesse"],
         delay: "0.4s"
     },
     {
-        before: "https://lh3.googleusercontent.com/aida-public/AB6AXuB3RS_9yUFdlnMW5--VqUsWrPFL1gKXLxtm0jIyzMACMeqeFE1_vTU7LUwkPBD3zh6N46ZLJvAmIvcUmCAfvJxiKFUlM39bw9-NjY59eL-Kad8BW5iVNRIZpzLzkECwCxzWPX6_CDQDFOtd0syjciwGdEVlc_ytFidwBpSrOJP2Xe6OZcxrsq9ZYQLl-njwTxqgBSneScEEBp7sLPCxl-LGIeLwSAfoQZyI_yGJK_N6Im8_uQcU9XgQsiADqgvci8fY1d1WDjgN398",
-        after: "https://placehold.co/600x800/8c7e6d/ffffff?text=DESPU%C3%89S:+Nariz+Perfilada&font=playfair-display",
         title: "Rinomodelación",
         description: "Corrección de imperfecciones nasales sin cirugía.",
         tags: ["Nariz", "Rellenos"],
         delay: "0.5s"
     },
     {
-        before: "https://lh3.googleusercontent.com/aida-public/AB6AXuCHhAwyDDTrgzn9f6_AaWpAqwZNEIIpxzk6kyyNPLXB-U3vwajWQHU51YDNhtAOJ3SBJCaxthZRLnxhkpaIwbUXQ7W4AI_frIlCptAwVYHvIyJWmezLAXdKGAcWjM_Q1_dT_OqZH_0bYVWE6NpZnNnm-3_7pWAl7eIplh955mlIOEgKqGW51vMrtsldplFj-bOdQ1UY940EgSeczGjk6_bxGSdORMrZPA6NToOmEiOO7lOrzwWgfZKmwpkOB-sPf71fRe5uoDRvy6Q",
-        after: "https://placehold.co/600x800/e9edf1/1A1A1A?text=DESPU%C3%89S:+Manos+J%C3%B3venes&font=playfair-display",
         title: "Rejuvenecimiento de Manos",
         description: "Restauración de volumen y mejora de la calidad de piel en manos.",
         tags: ["Manos", "Volumen"],
@@ -153,8 +142,10 @@ export default function GalleryPage() {
                     {galleryCases.map((item, index) => (
                        <GalleryCard 
                             key={index}
-                            before={item.before}
-                            after={item.after}
+                            before={placeholderData.gallery.cases[index].before.src}
+                            after={placeholderData.gallery.cases[index].after.src}
+                            beforeHint={placeholderData.gallery.cases[index].before.hint}
+                            afterHint={placeholderData.gallery.cases[index].after.hint}
                             title={item.title}
                             description={item.description}
                             tags={item.tags}

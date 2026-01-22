@@ -1,26 +1,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import placeholderData from '@/app/lib/placeholder-images.json';
 
 const journalEntries = [
   {
     date: "Oct 12, 2023",
     title: "Diseño Labial Arquitectónico",
     excerpt: "Enfoque en la definición del filtro y restauración de bordes sin sobre-proyección.",
-    imageUrl: "https://images.unsplash.com/photo-1597586124394-fbd1ef2b4269?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: placeholderData.medicalJournal.entries[0].imageUrl.src,
+    hint: placeholderData.medicalJournal.entries[0].imageUrl.hint,
     category: "Tendencia"
   },
   {
     date: "Sep 28, 2023",
     title: "Armonía de Perfil",
     excerpt: "Restauración de la definición mandibular y soporte estructural mediante inyección de plano profundo.",
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: placeholderData.medicalJournal.entries[1].imageUrl.src,
+    hint: placeholderData.medicalJournal.entries[1].imageUrl.hint,
     category: "Técnica"
   },
   {
     date: "Sep 15, 2023",
     title: "Glow Bio-Regenerativo",
     excerpt: "Terapia con PDRN y Polinucleótidos para mejorar la textura, tamaño de poro y elasticidad.",
-    imageUrl: "https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: placeholderData.medicalJournal.entries[2].imageUrl.src,
+    hint: placeholderData.medicalJournal.entries[2].imageUrl.hint,
     category: "Ciencia"
   }
 ];
@@ -44,6 +48,7 @@ export function MedicalJournal() {
                   fill
                   style={{objectFit: 'cover'}}
                   className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  data-ai-hint={entry.hint}
                 />
                 <div className="absolute top-4 right-4">
                   <span className="bg-card/90 backdrop-blur px-3 py-1 text-[9px] font-bold uppercase tracking-widest shadow-sm rounded-full text-accent">{entry.category}</span>

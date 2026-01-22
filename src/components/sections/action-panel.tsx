@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import placeholderData from '@/app/lib/placeholder-images.json';
 
 export function ActionPanel() {
   return (
@@ -12,9 +13,17 @@ export function ActionPanel() {
           </p>
           <div className="flex items-center gap-6 pt-4">
             <div className="flex -space-x-3">
-              <Image alt="Patient 1" className="w-12 h-12 rounded-full border-4 border-primary" width={48} height={48} src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3RS_9yUFdlnMW5--VqUsWrPFL1gKXLxtm0jIyzMACMeqeFE1_vTU7LUwkPBD3zh6N46ZLJvAmIvcUmCAfvJxiKFUlM39bw9-NjY59eL-Kad8BW5iVNRIZpzLzkECwCxzWPX6_CDQDFOtd0syjciwGdEVlc_ytFidwBpSrOJP2Xe6OZcxrsq9ZYQLl-njwTxqgBSneScEEBp7sLPCxl-LGIeLwSAfoQZyI_yGJK_N6Im8_uQcU9XgQsiADqgvci8fY1d1WDjgN398" />
-              <Image alt="Patient 2" className="w-12 h-12 rounded-full border-4 border-primary" width={48} height={48} src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHhAwyDDTrgzn9f6_AaWpAqwZNEIIpxzk6kyyNPLXB-U3vwajWQHU51YDNhtAOJ3SBJCaxthZRLnxhkpaIwbUXQ7W4AI_frIlCptAwVYHvIyJWmezLAXdKGAcWjM_Q1_dT_OqZH_0bYVWE6NpZnNnm-3_7pWAl7eIplh955mlIOEgKqGW51vMrtsldplFj-bOdQ1UY940EgSeczGjk6_bxGSdORMrZPA6NToOmEiOO7lOrzwWgfZKmwpkOB-sPf71fRe5uoDRvy6Q" />
-              <Image alt="Patient 3" className="w-12 h-12 rounded-full border-4 border-primary" width={48} height={48} src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsPsLvV9g2rN_IGFIk4qrjCjg-LQUCN159NpUzMn0E5egYnglw2UEsBFQtLExnOf-LxhP8U8XMTbBC6K_bDShWoMD7U3OjERSYUqTFpimGA-0VMMotJl-lOy49ZuYR-C_G3uo3f53QOIKu-ULfBjPSJBiAyAf3SmdqVaFLJnAS8b-Q_GMUQUfLQ8k73jUr2lMWcMISl-ZDcXswNYT8Px1hsGwz80dkwXFsCNJxtKTmlev1zMeeRtmppY8xfYUmhodTJvWMVFk0Cdk" />
+              {placeholderData.actionPanel.patients.map((patient, index) => (
+                <Image
+                  key={index}
+                  alt={`Patient ${index + 1}`}
+                  className="w-12 h-12 rounded-full border-4 border-primary"
+                  width={48}
+                  height={48}
+                  src={patient.src}
+                  data-ai-hint={patient.hint}
+                />
+              ))}
             </div>
             <span className="text-sm font-medium text-primary-foreground/90">+500 pacientes satisfechos</span>
           </div>

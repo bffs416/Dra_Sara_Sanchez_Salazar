@@ -1,3 +1,5 @@
+import placeholderData from '@/app/lib/placeholder-images.json';
+
 export function VideoBanner() {
   return (
     <>
@@ -18,9 +20,9 @@ export function VideoBanner() {
           muted
           loop
           playsInline
-          poster="https://placehold.co/1920x1080/e9edf1/183862?text=Clinic+Ambient"
+          poster={placeholderData.videoBanner.posterUrl}
         >
-          <source src="https://videos.pexels.com/video-files/3195556/3195556-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          <source src={placeholderData.videoBanner.videoUrl} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </section>
