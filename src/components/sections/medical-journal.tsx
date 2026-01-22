@@ -42,7 +42,8 @@ export function MedicalJournal() {
                   src={entry.imageUrl} 
                   alt={entry.title}
                   fill
-                  className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="absolute top-4 right-4">
                   <span className="bg-card/90 backdrop-blur px-3 py-1 text-[9px] font-bold uppercase tracking-widest shadow-sm rounded-full text-accent">{entry.category}</span>

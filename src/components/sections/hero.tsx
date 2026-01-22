@@ -7,13 +7,13 @@ export function Hero() {
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <div className="relative order-2 md:order-1">
           <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary rounded-full -z-10"></div>
-          <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-secondary">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-secondary">
             <Image 
               alt="Professional medical portrait of Dr. Sara Sanchez" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
+              className="grayscale hover:grayscale-0 transition-all duration-700" 
               src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              width={800}
-              height={1000}
+              fill
+              style={{ objectFit: 'cover' }}
             />
           </div>
           <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-xl border max-w-[240px]">
