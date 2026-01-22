@@ -1,22 +1,22 @@
 {
   "hero": {
     "doctorPortrait": {
-      "src": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "hint": "doctor smiling"
+      "src": "/doctor-portrait.jpg",
+      "hint": "professional doctor portrait"
     }
   },
   "actionPanel": {
     "patients": [
       {
-        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB3RS_9yUFdlnMW5--VqUsWrPFL1gKXLxtm0jIyzMACMeqeFE1_vTU7LUwkPBD3zh6N46ZLJvAmIvcUmCAfvJxiKFUlM39bw9-NjY59eL-Kad8BW5iVNRIZpzLzkECwCxzWPX6_CDQDFOtd0syjciwGdEVlc_ytFidwBpSrOJP2Xe6OZcxrsq9ZYQLl-njwTxqgBSneScEEBp7sLPCxl-LGIeLwSAfoQZyI_yGJK_N6Im8_uQcU9XgQsiADqgvci8fY1d1WDjgN398",
+        "src": "/patient-1.jpg",
         "hint": "patient portrait"
       },
       {
-        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCHhAwyDDTrgzn9f6_AaWpAqwZNEIIpxzk6kyyNPLXB-U3vwajWQHU51YDNhtAOJ3SBJCaxthZRLnxhkpaIwbUXQ7W4AI_frIlCptAwVYHvIyJWmezLAXdKGAcWjM_Q1_dT_OqZH_0bYVWE6NpZnNnm-3_7pWAl7eIplh955mlIOEgKqGW51vMrtsldplFj-bOdQ1UY940EgSeczGjk6_bxGSdORMrZPA6NToOmEiOO7lOrzwWgfZKmwpkOB-sPf71fRe5uoDRvy6Q",
+        "src": "/patient-2.jpg",
         "hint": "patient portrait"
       },
       {
-        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDsPsLvV9g2rN_IGFIk4qrjCjg-LQUCN159NpUzMn0E5egYnglw2UEsBFQtLExnOf-LxhP8U8XMTbBC6K_bDShWoMD7U3OjERSYUqTFpimGA-0VMMotJl-lOy49ZuYR-C_G3uo3f53QOIKu-ULfBjPSJBiAyAf3SmdqVaFLJnAS8b-Q_GMUQUfLQ8k73jUr2lMWcMISl-ZDcXswNYT8Px1hsGwz80dkwXFsCNJxtKTmlev1zMeeRtmppY8xfYUmhodTJvWMVFk0Cdk",
+        "src": "/patient-3.jpg",
         "hint": "patient portrait"
       }
     ]
@@ -30,31 +30,31 @@
     "cases": [
       {
         "before": {
-          "src": "https://images.unsplash.com/photo-1580798204642-0a284c5a7552?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/showcase-hair-before.jpg",
           "hint": "man hair loss"
         },
         "after": {
-          "src": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/showcase-hair-after.jpg",
           "hint": "man smiling"
         }
       },
       {
         "before": {
-          "src": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/showcase-lips-before.jpg",
           "hint": "woman portrait"
         },
         "after": {
-          "src": "https://images.unsplash.com/photo-1597586124394-fbd1ef2b4269?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/showcase-lips-after.jpg",
           "hint": "woman lips"
         }
       },
       {
         "before": {
-          "src": "https://images.unsplash.com/photo-1619946794135-5bc917a27793?q=80&w=2580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/showcase-jawline-before.jpg",
           "hint": "man profile"
         },
         "after": {
-          "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/showcase-jawline-after.jpg",
           "hint": "man jawline"
         }
       }
@@ -64,87 +64,87 @@
     "entries": [
       {
         "imageUrl": {
-          "src": "https://images.unsplash.com/photo-1597586124394-fbd1ef2b4269?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/journal-lips.jpg",
           "hint": "lips closeup"
         }
       },
       {
         "imageUrl": {
-          "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/journal-jawline.jpg",
           "hint": "man jawline"
         }
       },
       {
         "imageUrl": {
-          "src": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "src": "/journal-skin.jpg",
           "hint": "woman glowing skin"
         }
       }
     ]
   },
   "videoBanner": {
-    "videoUrl": "https://videos.pexels.com/video-files/3195556/3195556-uhd_2560_1440_25fps.mp4",
-    "posterUrl": "https://placehold.co/1920x1080/e9edf1/183862?text=Clinic+Ambient"
+    "videoUrl": "/clinic-video.mp4",
+    "posterUrl": "/clinic-video-poster.jpg"
   },
   "gallery": {
     "cases": [
       {
         "before": {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuA4AKwIxTx1jemgOIt5v604UQ1575QypZN1DOj-CWsZC7LRabPniM8BDb1EWydsVnJr2LYVPVCTocaHkvq-YTlSmaIi130_YXbPrNKxe7QsRZCnSBn_KCGlyU-ng1aScyAmenVuLpDHhzzR3jTJbn9nZQn_tNtcOJiNGW-2NvWInj7B-emP6rVmKC8y21TRft47rZvfxABmz_4yV897f7wx0hxi-eacGDbK3VDYsQ7bCh-LpiZUhPteP3Eqcc3m-YmHVzr1Rjx2k1A",
+          "src": "/gallery-case-1-before.jpg",
           "hint": "facial restoration"
         },
         "after": {
-          "src": "https://placehold.co/600x800/1A1A1A/e9edf1?text=DESPU%C3%89S:+Resultado+Final&font=playfair-display",
+          "src": "/gallery-case-1-after.jpg",
           "hint": "final result"
         }
       },
       {
         "before": {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAzYYkeph2zSVE2miWsJQ9osLJWKP1JBmpknMK2Ue4VpsmQ2xR9wLgZ2kyoHSs1k8GlMU_6tbXouH4t7Cn9OlsmnW9R53Tvf3ewxJ1doyp6pZe44JNK9W8ienGnLo9XsGCjhNOUeM22QzHg1q4yI8mYhtgWsrk8l59DwZ12Q0sPMRnwvAQYl2oD67Un1PLeotOrSMPKm4L1hQWhd1kLUtcllZarr8RMletwkDzTsPPdw_XqajrEYsjDuMcXaIZLVMQ3wlREVeaZM7k",
+          "src": "/gallery-case-2-before.jpg",
           "hint": "lip profile"
         },
         "after": {
-          "src": "https://placehold.co/600x800/7F5589/ffffff?text=DESPU%C3%89S:+Labios+Hidratados&font=playfair-display",
+          "src": "/gallery-case-2-after.jpg",
           "hint": "hydrated lips"
         }
       },
       {
         "before": {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuACWGEhodBGrCav9Ti9gG0h7UyBmNT5e-dVmzT1ef_PNHxnYuhCpEyVUAhdkTVChm2AYaQ3ejyv1K6uSZDNqde3C8YOOl2dEW9ZlqnXked0ygxrUHtQ35GGridWE7NJ8u10-LJSBtGxhvmqD9pH9VUoalIynpBfvv0W-Pf3Z9u9OCTaQWpwFZBv9AhzXkqELB41snan271z-NY-HnwLvxX9H-oIMJyrHwatoI4kHbxgvnXDnYr0wLwFIqrWBigMcPnodb0SPLK8CJM",
+          "src": "/gallery-case-3-before.jpg",
           "hint": "skin quality"
         },
         "after": {
-          "src": "https://placehold.co/600x800/B5A47C/ffffff?text=DESPU%C3%89S:+Piel+Luminosa&font=playfair-display",
+          "src": "/gallery-case-3-after.jpg",
           "hint": "luminous skin"
         }
       },
       {
         "before": {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkK13l5_4exbugBS9hJFavu9jiBSS6nuKkyH0EEk-S_cM3x7dv4A5omOrKIbnSRfrwK3vMrI1bEdW2eU8h-K7pSldZpiqpUng4g5PF_imdxNgvhlQX_SBOku4khHa2hvGjpX1ZjlTn_10XVV-_WBHVgwec5tyxUsE6sgxr_lAp6KR2Qvk8jDndFraxZguWdEhd_rZ92XUSw7UpwJFKzRXvrAK-o-r9Nuoy74dnMHX21LN9wpz08Z5YAzIDRWRgGnSqiYdC0L2g7Qw",
+          "src": "/gallery-case-4-before.jpg",
           "hint": "jawline definition"
         },
         "after": {
-          "src": "https://placehold.co/600x800/121212/ffffff?text=DESPU%C3%89S:+Mand%C3%ADbula+Definida&font=playfair-display",
+          "src": "/gallery-case-4-after.jpg",
           "hint": "defined jawline"
         }
       },
       {
         "before": {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB3RS_9yUFdlnMW5--VqUsWrPFL1gKXLxtm0jIyzMACMeqeFE1_vTU7LUwkPBD3zh6N46ZLJvAmIvcUmCAfvJxiKFUlM39bw9-NjY59eL-Kad8BW5iVNRIZpzLzkECwCxzWPX6_CDQDFOtd0syjciwGdEVlc_ytFidwBpSrOJP2Xe6OZcxrsq9ZYQLl-njwTxqgBSneScEEBp7sLPCxl-LGIeLwSAfoQZyI_yGJK_N6Im8_uQcU9XgQsiADqgvci8fY1d1WDjgN398",
+          "src": "/gallery-case-5-before.jpg",
           "hint": "rhinomodelation"
         },
         "after": {
-          "src": "https://placehold.co/600x800/8c7e6d/ffffff?text=DESPU%C3%89S:+Nariz+Perfilada&font=playfair-display",
+          "src": "/gallery-case-5-after.jpg",
           "hint": "profiled nose"
         }
       },
       {
         "before": {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCHhAwyDDTrgzn9f6_AaWpAqwZNEIIpxzk6kyyNPLXB-U3vwajWQHU51YDNhtAOJ3SBJCaxthZRLnxhkpaIwbUXQ7W4AI_frIlCptAwVYHvIyJWmezLAXdKGAcWjM_Q1_dT_OqZH_0bYVWE6NpZnNnm-3_7pWAl7eIplh955mlIOEgKqGW51vMrtsldplFj-bOdQ1UY940EgSeczGjk6_bxGSdORMrZPA6NToOmEiOO7lOrzwWgfZKmwpkOB-sPf71fRe5uoDRvy6Q",
+          "src": "/gallery-case-6-before.jpg",
           "hint": "hands rejuvenation"
         },
         "after": {
-          "src": "https://placehold.co/600x800/e9edf1/1A1A1A?text=DESPU%C3%89S:+Manos+J%C3%B3venes&font=playfair-display",
+          "src": "/gallery-case-6-after.jpg",
           "hint": "young hands"
         }
       }
@@ -153,20 +153,20 @@
   "procedures": {
     "services": [
         { "id": "implante", "cases": [
-            { "b": "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&q=80&w=800", "a": "https://images.unsplash.com/photo-1503910321442-7f2bc9adbb2f?auto=format&fit=crop&q=80&w=800" },
-            { "b": "https://images.unsplash.com/photo-1615394200638-34986fc0d099?auto=format&fit=crop&q=80&w=800", "a": "https://images.unsplash.com/photo-1527371285272-823b146740c0?auto=format&fit=crop&q=80&w=800" }
+            { "b": "/proc-hair-1-before.jpg", "a": "/proc-hair-1-after.jpg" },
+            { "b": "/proc-hair-2-before.jpg", "a": "/proc-hair-2-after.jpg" }
         ]},
         { "id": "meso_capilar", "cases": [
-            { "b": "https://images.unsplash.com/photo-1615394191378-02f5a6064070?auto=format&fit=crop&q=80&w=800", "a": "https://images.unsplash.com/photo-1576091160550-2173bdb999ef?auto=format&fit=crop&q=80&w=800" }
+            { "b": "/proc-meso-1-before.jpg", "a": "/proc-meso-1-after.jpg" }
         ]},
         { "id": "hialuronico", "cases": [
-            { "b": "https://images.unsplash.com/photo-1596704016754-080c60124b13?auto=format&fit=crop&q=80&w=800", "a": "https://images.unsplash.com/photo-1594465919760-441fe5908ab0?auto=format&fit=crop&q=80&w=800" }
+            { "b": "/proc-filler-1-before.jpg", "a": "/proc-filler-1-after.jpg" }
         ]},
         { "id": "botox", "cases": [
-            { "b": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800", "a": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800" }
+            { "b": "/proc-botox-1-before.jpg", "a": "/proc-botox-1-after.jpg" }
         ]},
         { "id": "criolipolisis", "cases": [
-            { "b": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800", "a": "https://images.unsplash.com/photo-1519824141121-997437a91bf9?auto=format&fit=crop&q=80&w=800" }
+            { "b": "/proc-fatfreeze-1-before.jpg", "a": "/proc-fatfreeze-1-after.jpg" }
         ]}
     ]
   }

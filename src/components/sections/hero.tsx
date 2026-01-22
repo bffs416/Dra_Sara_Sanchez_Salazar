@@ -11,10 +11,10 @@ export function Hero() {
           <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-secondary">
             <Image 
               alt="Professional medical portrait of Dr. Sara Sanchez" 
-              className="grayscale hover:grayscale-0 transition-all duration-700" 
+              className="grayscale hover:grayscale-0 transition-all duration-700 object-cover" 
               src={placeholderData.hero.doctorPortrait.src}
-              fill
-              style={{ objectFit: 'cover' }}
+              width={800}
+              height={1000}
               data-ai-hint={placeholderData.hero.doctorPortrait.hint}
             />
           </div>
