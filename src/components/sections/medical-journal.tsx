@@ -27,7 +27,7 @@ const journalEntries = [
 
 export function MedicalJournal() {
   return (
-    <section className="py-24 bg-background border-t border-border">
+    <section className="py-24 bg-background border-t border-border" id="blog">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-12">
           <span className="text-accent font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Medical Journal</span>
@@ -42,8 +42,8 @@ export function MedicalJournal() {
                   src={entry.imageUrl} 
                   alt={entry.title}
                   fill
+                  style={{objectFit: 'cover'}}
                   className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                  style={{ objectFit: 'cover' }}
                 />
                 <div className="absolute top-4 right-4">
                   <span className="bg-card/90 backdrop-blur px-3 py-1 text-[9px] font-bold uppercase tracking-widest shadow-sm rounded-full text-accent">{entry.category}</span>

@@ -17,6 +17,7 @@ export function Header() {
           <Link className="text-sm font-semibold hover:text-accent transition-colors uppercase tracking-wider" href="#servicios">Tratamientos</Link>
           <Link className="text-sm font-semibold hover:text-accent transition-colors uppercase tracking-wider" href="#philosophy">Metodología</Link>
           <Link className="text-sm font-semibold hover:text-accent transition-colors uppercase tracking-wider" href="#results">Resultados</Link>
+          <Link className="text-sm font-semibold hover:text-accent transition-colors uppercase tracking-wider" href="#blog">Blog</Link>
           <button className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-sm">
             CONTACTO
           </button>

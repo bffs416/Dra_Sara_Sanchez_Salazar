@@ -6,6 +6,8 @@ import { cn } from '@/lib/utils';
 
 const cases = [
     {
+        sectionTitle: `Resultados Científicos, <br><span class="italic font-normal">Cabello Auténtico</span>`,
+        sectionDesc: "Interactúa con nuestra data clínica. Selecciona un caso de implante capilar y explora la diferencia en densidad, diseño de línea frontal y cobertura de coronilla tras el tratamiento.",
         title: "Implante Capilar Frontal Completo",
         description: "Paciente 40 años. Recesión marcada en entradas y disminución de densidad frontal. Se realiza implante capilar estratégico con diseño natural de la línea capilar y aumento uniforme de densidad.",
         before: "https://images.unsplash.com/photo-1580798204642-0a284c5a7552?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -15,6 +17,8 @@ const cases = [
         tags: ["Implante Capilar", "Línea Frontal", "Alta Densidad"]
     },
     {
+        sectionTitle: `Rejuvenecimiento Facial, <br><span class="italic font-normal">Sutil & Natural</span>`,
+        sectionDesc: "Protocolos combinados para restaurar volumen y luminosidad. Nuestros casos demuestran cómo pequeñas correcciones estratégicas logran un impacto global en la armonía del rostro.",
         title: "Diseño Labial Arquitectónico",
         description: "Paciente 28 años. Definición del filtro y restauración de volumen labial sutil. Enfoque en hidratación y proyección natural sin efecto de 'pato'.",
         before: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -24,6 +28,8 @@ const cases = [
         tags: ["Ácido Hialurónico", "Hidratación", "Perfilado"]
     },
     {
+        sectionTitle: `Armonización Facial, <br><span class="italic font-normal">Estructura & Definición</span>`,
+        sectionDesc: "Redefinición del óvalo facial y masculinización sin cirugía. Utilizando inductores de colágeno para proyectar mentón y definir la mandíbula con resultados duraderos.",
         title: "Perfilado Mandibular",
         description: "Paciente 35 años. Definición del ángulo mandibular y reducción de la papada. Resultado: perfil más definido y cuello estilizado.",
         before: "https://images.unsplash.com/photo-1619946794135-5bc917a27793?q=80&w=2580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -76,11 +82,10 @@ export function BeforeAfterShowcase() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
                     <div className="max-w-2xl">
                         <span className="text-accent-gold font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Casos Clínicos</span>
-                        <h2 className="serif-heading text-4xl md:text-5xl text-foreground leading-tight mb-6">
-                            Resultados Científicos, <br /><span className="italic font-normal">Cabello Auténtico</span>
+                        <h2 className="serif-heading text-4xl md:text-5xl text-foreground leading-tight mb-6" dangerouslySetInnerHTML={{ __html: currentCase.sectionTitle }}>
                         </h2>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            Interactúa con nuestra data clínica. Selecciona un caso de implante capilar y explora la diferencia en densidad, diseño de línea frontal y cobertura de coronilla tras el tratamiento.
+                            {currentCase.sectionDesc}
                         </p>
                     </div>
                     <div className="flex gap-2 md:gap-4 flex-wrap">

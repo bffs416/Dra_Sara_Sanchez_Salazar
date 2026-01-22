@@ -10,10 +10,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Manrope"', 'sans-serif'],
-        serif: ['"Noto Serif"', 'serif'],
-        body: ['"Manrope"', 'sans-serif'],
-        headline: ['"Noto Serif"', 'serif'],
+        display: ['"Montserrat"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
+        body: ['"Montserrat"', 'sans-serif'],
+        headline: ['"Playfair Display"', 'serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
