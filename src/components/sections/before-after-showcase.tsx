@@ -79,6 +79,36 @@ export function BeforeAfterShowcase() {
     return (
         <section className="py-24 bg-card" id="results">
             <div className="max-w-6xl mx-auto px-6">
+                <div className="grid md:grid-cols-3 gap-6 mb-20">
+                    <div className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-video relative group">
+                        <iframe
+                            className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder1" title="Video 1"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+                    <div className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-video relative group">
+                        <iframe
+                            className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder2" title="Video 2"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+                    <div className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-video relative group">
+                        <iframe
+                            className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder3" title="Video 3"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+                </div>
+
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
                     <div className="max-w-2xl">
                         <span className="text-accent-gold font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Casos Clínicos</span>
