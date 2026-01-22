@@ -198,4 +198,77 @@
         flex-grow: 1;
         background: linear-gradient(to right, var(--accent-soft), transparent);
     }
+
+    /* Gallery Page Styles */
+    .gallery-page .fade-in {
+        animation: fadeIn 0.8s ease-in forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .gallery-page .analysis-container {
+        position: relative;
+        cursor: none;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .gallery-page .after-overlay {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        clip-path: circle(0px at 50% 50%);
+        transition: clip-path 0.1s ease-out;
+        pointer-events: none;
+        z-index: 20;
+    }
+
+    .gallery-page .analysis-container:hover .after-overlay {
+        clip-path: circle(80px at var(--mouse-x) var(--mouse-y));
+    }
+
+    .gallery-page .lens-ring {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        border: 2px solid hsl(var(--accent-gold) / 0.6);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        left: var(--mouse-x);
+        top: var(--mouse-y);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+        backdrop-filter: contrast(1.1);
+        z-index: 30;
+    }
+
+    .gallery-page .analysis-container:hover .lens-ring {
+        opacity: 1;
+    }
+
+    .gallery-page .lens-ui {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 10px;
+        white-space: nowrap;
+        color: hsl(var(--accent-gold));
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 }

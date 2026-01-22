@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 const cases = [
@@ -182,10 +183,10 @@ export function BeforeAfterShowcase() {
                         </div>
 
                         <div className="pt-2">
-                            <a href="#" className="flex items-center gap-3 text-foreground font-bold text-[11px] tracking-widest uppercase hover:text-accent-gold transition-colors group">
+                            <Link href="/gallery" className="flex items-center gap-3 text-foreground font-bold text-[11px] tracking-widest uppercase hover:text-accent-gold transition-colors group">
                                 Ver Galería Completa
                                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
