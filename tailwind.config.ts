@@ -10,9 +10,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['"PT Sans"', 'sans-serif'],
-        headline: ['"Playfair Display"', 'serif'],
-        code: ['monospace'],
+        display: ['"Manrope"', 'sans-serif'],
+        serif: ['"Noto Serif"', 'serif'],
+        body: ['"Manrope"', 'sans-serif'],
+        headline: ['"Noto Serif"', 'serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -41,6 +42,7 @@ export default {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
+        'accent-gold': 'hsl(var(--accent-gold))',
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
@@ -70,6 +72,9 @@ export default {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+        xl: "0.75rem",
+        '2xl': "1rem",
+        '3xl': "1.5rem",
       },
       keyframes: {
         'accordion-down': {

@@ -1,43 +1,56 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="border-t">
-      <div className="container mx-auto max-w-7xl px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-headline text-xl font-bold mb-4">Sara Salazar</h3>
-            <p className="text-muted-foreground">
-              Your trusted partner in aesthetic medicine.
+    <footer className="bg-background border-t border-border py-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-16">
+          <div className="max-w-xs">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-7 h-7 bg-primary rounded-full flex items-center justify-center text-primary-foreground">
+                <span className="material-symbols-outlined text-xs" style={{fontVariationSettings: "'FILL' 1"}}>spa</span>
+              </div>
+              <h2 className="text-lg font-bold tracking-tight text-foreground uppercase">Dra. Sara Sanchez</h2>
+            </div>
+            <p className="text-sm text-foreground/50 leading-relaxed">
+              Autoridad médica en estética regenerativa y armonización facial no quirúrgica. Clínica de prevención líder en España.
             </p>
           </div>
-          <div>
-            <h3 className="font-headline text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link href="#treatments" className="text-muted-foreground hover:text-primary">Treatments</Link></li>
-              <li><Link href="#results" className="text-muted-foreground hover:text-primary">Results</Link></li>
-              <li><Link href="#journal" className="text-muted-foreground hover:text-primary">Medical Journal</Link></li>
-              <li><Link href="#appointment" className="text-muted-foreground hover:text-primary">Book Now</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-headline text-lg font-semibold mb-4">Connect With Us</h3>
-            <div className="flex space-x-4">
-              <Link href="#" aria-label="Facebook">
-                <Facebook className="text-muted-foreground hover:text-primary" />
-              </Link>
-              <Link href="#" aria-label="Instagram">
-                <Instagram className="text-muted-foreground hover:text-primary" />
-              </Link>
-              <Link href="#" aria-label="Twitter">
-                <Twitter className="text-muted-foreground hover:text-primary" />
-              </Link>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-16">
+            <div>
+              <h4 className="font-bold text-[10px] uppercase tracking-widest mb-8 text-accent-gold">Clínica</h4>
+              <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-foreground/60">
+                <li><Link href="#servicios" className="hover:text-foreground transition-colors">Tratamientos</Link></li>
+                <li><Link href="#philosophy" className="hover:text-foreground transition-colors">Filosofía</Link></li>
+                <li><Link href="#results" className="hover:text-foreground transition-colors">Galería</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-[10px] uppercase tracking-widest mb-8 text-accent-gold">Legal</h4>
+              <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-foreground/60">
+                <li><Link href="#" className="hover:text-foreground transition-colors">Privacidad</Link></li>
+                <li><Link href="#" className="hover:text-foreground transition-colors">Aviso Legal</Link></li>
+                <li><Link href="#" className="hover:text-foreground transition-colors">Condiciones</Link></li>
+              </ul>
+            </div>
+            <div className="hidden sm:block">
+              <h4 className="font-bold text-[10px] uppercase tracking-widest mb-8 text-accent-gold">Contacto</h4>
+              <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-foreground/60">
+                <li><Link href="#" className="hover:text-foreground transition-colors">Instagram</Link></li>
+                <li><Link href="#" className="hover:text-foreground transition-colors">LinkedIn</Link></li>
+                <li><Link href="#" className="hover:text-foreground transition-colors">WhatsApp</Link></li>
+              </ul>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} Sara Salazar Aesthetics. All rights reserved.</p>
+
+        <div className="mt-24 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-[10px] uppercase tracking-widest font-bold text-foreground/30">© {new Date().getFullYear()} Dra. Sara Sanchez Medical Clinic. All Rights Reserved.</p>
+          <div className="flex items-center gap-8 grayscale opacity-30">
+            <span className="text-[9px] font-bold uppercase tracking-tighter border border-foreground px-2 py-1">Secure Medical System</span>
+            <span className="text-[9px] font-bold uppercase tracking-tighter border border-foreground px-2 py-1">EU Certified Physician</span>
+          </div>
         </div>
       </div>
     </footer>

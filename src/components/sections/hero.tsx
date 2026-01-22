@@ -1,36 +1,51 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
-
   return (
-    <section className="relative h-[60vh] min-h-[400px] w-full">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroImage.imageHint}
-        />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/50 to-transparent" />
-      <div className="relative z-10 flex h-full items-center justify-center">
-        <div className="container max-w-7xl text-center text-primary-foreground">
-          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-md">
-            The Science of Beauty, Perfected.
-          </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl drop-shadow-sm">
-            Discover a new era of aesthetic medicine where your unique beauty is enhanced through personalized, state-of-the-art treatments.
-          </p>
-          <div className="mt-8">
-            <Button size="lg" asChild className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-              <Link href="#appointment">Book a Consultation</Link>
-            </Button>
+    <section className="max-w-6xl mx-auto px-6 py-12 md:py-24">
+      <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative order-2 md:order-1">
+          <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary rounded-full -z-10"></div>
+          <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-secondary">
+            <Image 
+              alt="Professional medical portrait of Dr. Sara Sanchez" 
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
+              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              width={800}
+              height={1000}
+            />
+          </div>
+          <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-xl border max-w-[240px]">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="material-symbols-outlined text-accent-gold">verified</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-accent-gold">Certificada</span>
+            </div>
+            <p className="text-sm italic font-serif">"La elegancia es la única belleza que nunca se marchita."</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 order-1 md:order-2">
+          <div className="space-y-4">
+            <span className="text-accent font-bold text-sm tracking-[0.3em] uppercase block">
+              Implante Capilar · Resultados Naturales
+            </span>
+            <h2 className="serif-title text-5xl md:text-6xl font-bold leading-[1.1] text-foreground">
+              Recuperar tu cabello es una decisión <span className="text-accent-gold">inteligente.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-lg">
+              Especialista en implante capilar y medicina estética avanzada. Tratamientos personalizados para
+              recuperar densidad capilar y, cuando lo necesitas, complementar con procedimientos faciales para
+              armonizar tu imagen con resultados naturales y seguros.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="bg-primary text-primary-foreground h-14 px-10 rounded-lg font-bold text-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group">
+              Agendar Cita
+              <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+            </button>
+            <button className="border-2 border-primary text-primary h-14 px-10 rounded-lg font-bold text-lg hover:bg-primary/5 transition-all">
+              Ver Catálogo
+            </button>
           </div>
         </div>
       </div>
