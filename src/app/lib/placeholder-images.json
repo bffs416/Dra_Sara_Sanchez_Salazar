@@ -83,8 +83,8 @@
     ]
   },
   "videoBanner": {
-    "videoUrl": "/clinic-video.mp4",
-    "posterUrl": "/clinic-video-poster.jpg"
+    "videoUrl": "https://videos.pexels.com/video-files/3195556/3195556-uhd_2560_1440_25fps.mp4",
+    "posterUrl": "https://placehold.co/1920x1080/e9edf1/183862?text=Clinic+Ambient"
   },
   "gallery": {
     "cases": [
