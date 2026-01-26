@@ -1,7 +1,8 @@
+
 {
   "hero": {
     "doctorPortrait": {
-      "src": "/Dra#1.png",
+      "src": "/DraSara1.png",
       "hint": "professional doctor portrait"
     }
   },
@@ -83,8 +84,8 @@
     ]
   },
   "videoBanner": {
-    "videoUrl": "https://videos.pexels.com/video-files/3195556/3195556-uhd_2560_1440_25fps.mp4",
-    "posterUrl": "https://placehold.co/1920x1080/e9edf1/183862?text=Clinic+Ambient"
+    "videoUrl": "/clinic-video.mp4",
+    "posterUrl": "/clinic-video-poster.jpg"
   },
   "gallery": {
     "cases": [
