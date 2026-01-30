@@ -2,28 +2,28 @@
 {
   "header": {
     "logo": {
-      "src": "/logo.png",
+      "src": "https://picsum.photos/seed/logo/100/100",
       "hint": "clinic logo"
     }
   },
   "hero": {
     "doctorPortrait": {
-      "src": "/DraSara1.png",
+      "src": "https://picsum.photos/seed/hero-portrait/800/1000",
       "hint": "professional doctor portrait"
     }
   },
   "actionPanel": {
     "patients": [
       {
-        "src": "/antes 1.jpg",
+        "src": "https://picsum.photos/seed/patient1/100/100",
         "hint": "patient portrait"
       },
       {
-        "src": "/despues 2.jpg",
+        "src": "https://picsum.photos/seed/patient2/100/100",
         "hint": "patient portrait"
       },
       {
-        "src": "/patient-3.jpg",
+        "src": "https://picsum.photos/seed/patient3/100/100",
         "hint": "patient portrait"
       }
     ]
@@ -37,31 +37,31 @@
     "cases": [
       {
         "before": {
-          "src": "/antes 1.jpg",
+          "src": "https://picsum.photos/seed/showcase1before/800/600",
           "hint": "man hair loss"
         },
         "after": {
-          "src": "/despues 2.jpg",
+          "src": "https://picsum.photos/seed/showcase1after/800/600",
           "hint": "man smiling"
         }
       },
       {
         "before": {
-          "src": "/showcase-lips-before.jpg",
+          "src": "https://picsum.photos/seed/showcase2before/800/600",
           "hint": "woman portrait"
         },
         "after": {
-          "src": "/showcase-lips-after.jpg",
+          "src": "https://picsum.photos/seed/showcase2after/800/600",
           "hint": "woman lips"
         }
       },
       {
         "before": {
-          "src": "/showcase-jawline-before.jpg",
+          "src": "https://picsum.photos/seed/showcase3before/800/600",
           "hint": "man profile"
         },
         "after": {
-          "src": "/showcase-jawline-after.jpg",
+          "src": "https://picsum.photos/seed/showcase3after/800/600",
           "hint": "man jawline"
         }
       }
@@ -71,19 +71,19 @@
     "entries": [
       {
         "imageUrl": {
-          "src": "/journal-lips.jpg",
+          "src": "https://picsum.photos/seed/journal1/600/600",
           "hint": "lips closeup"
         }
       },
       {
         "imageUrl": {
-          "src": "/journal-jawline.jpg",
+          "src": "https://picsum.photos/seed/journal2/600/600",
           "hint": "man jawline"
         }
       },
       {
         "imageUrl": {
-          "src": "/journal-skin.jpg",
+          "src": "https://picsum.photos/seed/journal3/600/600",
           "hint": "woman glowing skin"
         }
       }
@@ -91,67 +91,67 @@
   },
   "videoBanner": {
     "videoUrl": "/4.mp4",
-    "posterUrl": "/clinic-video-poster.jpg"
+    "posterUrl": "https://picsum.photos/seed/videoposter/1920/1080"
   },
   "gallery": {
     "cases": [
       {
         "before": {
-          "src": "/gallery-case-1-before.jpg",
+          "src": "https://picsum.photos/seed/gallery1b/600/750",
           "hint": "facial restoration"
         },
         "after": {
-          "src": "/gallery-case-1-after.jpg",
+          "src": "https://picsum.photos/seed/gallery1a/600/750",
           "hint": "final result"
         }
       },
       {
         "before": {
-          "src": "/gallery-case-2-before.jpg",
+          "src": "https://picsum.photos/seed/gallery2b/600/750",
           "hint": "lip profile"
         },
         "after": {
-          "src": "/gallery-case-2-after.jpg",
+          "src": "https://picsum.photos/seed/gallery2a/600/750",
           "hint": "hydrated lips"
         }
       },
       {
         "before": {
-          "src": "/gallery-case-3-before.jpg",
+          "src": "https://picsum.photos/seed/gallery3b/600/750",
           "hint": "skin quality"
         },
         "after": {
-          "src": "/gallery-case-3-after.jpg",
+          "src": "https://picsum.photos/seed/gallery3a/600/750",
           "hint": "luminous skin"
         }
       },
       {
         "before": {
-          "src": "/gallery-case-4-before.jpg",
+          "src": "https://picsum.photos/seed/gallery4b/600/750",
           "hint": "jawline definition"
         },
         "after": {
-          "src": "/gallery-case-4-after.jpg",
+          "src": "https://picsum.photos/seed/gallery4a/600/750",
           "hint": "defined jawline"
         }
       },
       {
         "before": {
-          "src": "/gallery-case-5-before.jpg",
+          "src": "https://picsum.photos/seed/gallery5b/600/750",
           "hint": "rhinomodelation"
         },
         "after": {
-          "src": "/gallery-case-5-after.jpg",
+          "src": "https://picsum.photos/seed/gallery5a/600/750",
           "hint": "profiled nose"
         }
       },
       {
         "before": {
-          "src": "/gallery-case-6-before.jpg",
+          "src": "https://picsum.photos/seed/gallery6b/600/750",
           "hint": "hands rejuvenation"
         },
         "after": {
-          "src": "/gallery-case-6-after.jpg",
+          "src": "https://picsum.photos/seed/gallery6a/600/750",
           "hint": "young hands"
         }
       }
@@ -160,20 +160,20 @@
   "procedures": {
     "services": [
         { "id": "implante", "cases": [
-            { "b": "/proc-hair-1-before.jpg", "a": "/proc-hair-1-after.jpg" },
-            { "b": "/proc-hair-2-before.jpg", "a": "/proc-hair-2-after.jpg" }
+            { "b": "https://picsum.photos/seed/proc1b/600/750", "a": "https://picsum.photos/seed/proc1a/600/750" },
+            { "b": "https://picsum.photos/seed/proc2b/600/750", "a": "https://picsum.photos/seed/proc2a/600/750" }
         ]},
         { "id": "meso_capilar", "cases": [
-            { "b": "/proc-meso-1-before.jpg", "a": "/proc-meso-1-after.jpg" }
+            { "b": "https://picsum.photos/seed/proc3b/600/750", "a": "https://picsum.photos/seed/proc3a/600/750" }
         ]},
         { "id": "hialuronico", "cases": [
-            { "b": "/proc-filler-1-before.jpg", "a": "/proc-filler-1-after.jpg" }
+            { "b": "https://picsum.photos/seed/proc4b/600/750", "a": "https://picsum.photos/seed/proc4a/600/750" }
         ]},
         { "id": "botox", "cases": [
-            { "b": "/proc-botox-1-before.jpg", "a": "/proc-botox-1-after.jpg" }
+            { "b": "https://picsum.photos/seed/proc5b/600/750", "a": "https://picsum.photos/seed/proc5a/600/750" }
         ]},
         { "id": "criolipolisis", "cases": [
-            { "b": "/proc-fatfreeze-1-before.jpg", "a": "/proc-fatfreeze-1-after.jpg" }
+            { "b": "https://picsum.photos/seed/proc6b/600/750", "a": "https://picsum.photos/seed/proc6a/600/750" }
         ]}
     ]
   }
