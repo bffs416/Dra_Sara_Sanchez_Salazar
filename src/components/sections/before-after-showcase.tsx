@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import placeholderData from '@/app/lib/placeholder-images.json';
@@ -122,17 +121,17 @@ export function BeforeAfterShowcase() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <div className="lg:col-span-7">
-                        <div ref={containerRef} className="analysis-container relative aspect-[4/3] rounded-2xl bg-secondary shadow-2xl overflow-visible group">
-                            <div className="absolute inset-0 grayscale-[20%]">
-                                <Image 
-                                    src={currentCase.before} 
-                                    alt="Before treatment" 
-                                    fill 
-                                    style={{ objectFit: 'cover', borderRadius: '1rem' }}
-                                    data-ai-hint={placeholderData.beforeAfterShowcase.cases[activeCaseIndex].before.hint}
-                                />
-                            </div>
-                            <div className="after-overlay" style={{ backgroundImage: `url(${currentCase.after})` }}></div>
+                        <div ref={containerRef} className="analysis-container relative aspect-[4/3] rounded-2xl bg-secondary shadow-2xl overflow-hidden group">
+                            <div 
+                                className="absolute inset-0 bg-cover bg-center grayscale-[20%]" 
+                                style={{ backgroundImage: `url(${currentCase.before})` }}
+                                data-ai-hint={placeholderData.beforeAfterShowcase.cases[activeCaseIndex].before.hint}
+                            />
+                            <div 
+                                className="after-overlay" 
+                                style={{ backgroundImage: `url(${currentCase.after})` }}
+                                data-ai-hint={placeholderData.beforeAfterShowcase.cases[activeCaseIndex].after.hint}
+                            ></div>
                             <div className="lens-ring">
                                 <span className="lens-ui">Analizando Restauración</span>
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full mb-2">

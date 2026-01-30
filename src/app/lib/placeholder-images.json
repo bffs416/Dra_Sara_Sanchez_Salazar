@@ -15,11 +15,11 @@
   "actionPanel": {
     "patients": [
       {
-        "src": "/patient-1.jpg",
+        "src": "/antes 1.jpg",
         "hint": "patient portrait"
       },
       {
-        "src": "/patient-2.jpg",
+        "src": "/despues 2.jpg",
         "hint": "patient portrait"
       },
       {
@@ -37,11 +37,11 @@
     "cases": [
       {
         "before": {
-          "src": "/showcase-hair-before.jpg",
+          "src": "/antes 1.jpg",
           "hint": "man hair loss"
         },
         "after": {
-          "src": "/showcase-hair-after.jpg",
+          "src": "/despues 2.jpg",
           "hint": "man smiling"
         }
       },
@@ -90,7 +90,7 @@
     ]
   },
   "videoBanner": {
-    "videoUrl": "/clinic-video.mp4",
+    "videoUrl": "/4.mp4",
     "posterUrl": "/clinic-video-poster.jpg"
   },
   "gallery": {
