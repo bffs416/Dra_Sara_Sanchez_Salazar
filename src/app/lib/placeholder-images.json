@@ -8,7 +8,7 @@
   },
   "hero": {
     "doctorPortrait": {
-      "src": "https://picsum.photos/seed/hero-portrait/800/1000",
+      "src": "/DraSara1.png",
       "hint": "professional doctor portrait"
     }
   },
@@ -37,31 +37,31 @@
     "cases": [
       {
         "before": {
-          "src": "https://picsum.photos/seed/showcase1before/800/600",
+          "src": "/antes1.jpg",
           "hint": "man hair loss"
         },
         "after": {
-          "src": "https://picsum.photos/seed/showcase1after/800/600",
+          "src": "/despues2.jpg",
           "hint": "man smiling"
         }
       },
       {
         "before": {
-          "src": "https://picsum.photos/seed/showcase2before/800/600",
+          "src": "/labiospre.png",
           "hint": "woman portrait"
         },
         "after": {
-          "src": "https://picsum.photos/seed/showcase2after/800/600",
+          "src": "/labiospost.png",
           "hint": "woman lips"
         }
       },
       {
         "before": {
-          "src": "https://picsum.photos/seed/showcase3before/800/600",
+          "src": "/Platismapre.png",
           "hint": "man profile"
         },
         "after": {
-          "src": "https://picsum.photos/seed/showcase3after/800/600",
+          "src": "/Platismapost.png",
           "hint": "man jawline"
         }
       }
