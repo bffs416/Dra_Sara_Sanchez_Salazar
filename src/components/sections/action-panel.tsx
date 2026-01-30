@@ -29,10 +29,10 @@ export function ActionPanel() {
           </div>
         </div>
         <div className="w-full md:w-auto z-10">
-          <button className="w-full md:w-auto bg-white text-primary px-10 py-5 rounded-2xl font-extrabold text-lg shadow-2xl hover:bg-accent hover:text-white transition-all flex items-center justify-center gap-3">
+          <a href="https://wa.me/573023674189" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-white text-primary px-10 py-5 rounded-2xl font-extrabold text-lg shadow-2xl hover:bg-accent hover:text-white transition-all flex items-center justify-center gap-3">
             <span className="material-symbols-outlined">chat</span>
             CONSULTAR POR WHATSAPP
-          </button>
+          </a>
         </div>
       </div>
     </section>

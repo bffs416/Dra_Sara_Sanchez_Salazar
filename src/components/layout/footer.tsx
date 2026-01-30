@@ -45,7 +45,7 @@ export function Footer() {
               <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-foreground/60">
                 <li><Link href="#" className="hover:text-foreground transition-colors">Instagram</Link></li>
                 <li><Link href="#" className="hover:text-foreground transition-colors">LinkedIn</Link></li>
-                <li><Link href="#" className="hover:text-foreground transition-colors">WhatsApp</Link></li>
+                <li><a href="https://wa.me/573023674189" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">WhatsApp</a></li>
               </ul>
             </div>
           </div>

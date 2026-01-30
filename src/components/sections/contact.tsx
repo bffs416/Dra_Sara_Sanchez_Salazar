@@ -17,7 +17,7 @@ export function Contact() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Teléfono</label>
-                  <input type="tel" className="w-full bg-secondary/30 border-0 border-b-2 border-border focus:border-accent-gold focus:ring-0 px-0 py-3 transition-colors text-foreground dark:bg-transparent" placeholder="+34 600 000 000" />
+                  <input type="tel" className="w-full bg-secondary/30 border-0 border-b-2 border-border focus:border-accent-gold focus:ring-0 px-0 py-3 transition-colors text-foreground dark:bg-transparent" placeholder="+57 300 000 0000" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Interés</label>
@@ -45,7 +45,7 @@ export function Contact() {
               <h3 className="serif-heading text-2xl text-foreground mb-6">Nuestra Ubicación</h3>
               <div className="rounded-2xl overflow-hidden h-[300px] shadow-lg border relative group">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.1197637396798!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2ses!4v1709228472300!5m2!1sen!2ses"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63466.75932911293!2d-75.59295199999999!3d6.20093845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad09%3A0x42137cfcc7b53b56!2sEl%20Poblado%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia!5e0!3m2!1sen!2sus!4v1715893307772!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
@@ -55,7 +55,7 @@ export function Contact() {
                   className="group-hover:filter-none transition-all duration-700"
                 ></iframe>
                 <div className="absolute bottom-4 left-4 bg-card/90 backdrop-blur px-4 py-2 rounded-lg shadow-sm">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-card-foreground">Barrio de Salamanca, Madrid</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-card-foreground">El Poblado, Medellín</p>
                 </div>
               </div>
             </div>
@@ -65,14 +65,14 @@ export function Contact() {
                 <span className="material-symbols-outlined text-accent-gold text-3xl">location_on</span>
                 <div>
                   <h4 className="font-bold text-foreground">Dirección</h4>
-                  <p className="text-sm text-muted-foreground">Calle Velázquez, 45<br />28001 Madrid, España</p>
+                  <p className="text-sm text-muted-foreground">El Poblado<br />Medellín, Colombia</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <span className="material-symbols-outlined text-accent-gold text-3xl">mark_email_read</span>
                 <div>
                   <h4 className="font-bold text-foreground">Contacto Directo</h4>
-                  <p className="text-sm text-muted-foreground">+34 910 000 000<br />citas@drasarasanchez.com</p>
+                  <p className="text-sm text-muted-foreground">+57 300 000 0000<br />citas@drasarasanchez.com</p>
                 </div>
               </div>
             </div>
