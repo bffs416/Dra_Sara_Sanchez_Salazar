@@ -1,5 +1,11 @@
 
 {
+  "header": {
+    "logo": {
+      "src": "/logo.png",
+      "hint": "clinic logo"
+    }
+  },
   "hero": {
     "doctorPortrait": {
       "src": "/DraSara1.png",
@@ -84,7 +90,7 @@
     ]
   },
   "videoBanner": {
-    "videoUrl": "/3.mp4",
+    "videoUrl": "/clinic-video.mp4",
     "posterUrl": "/clinic-video-poster.jpg"
   },
   "gallery": {

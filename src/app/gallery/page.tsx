@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import placeholderData from '@/app/lib/placeholder-images.json';
 
 const GalleryCard = ({ before, after, title, description, tags, delay, beforeHint, afterHint }: { before: string, after: string, title: string, description: string, tags: string[], delay: string, beforeHint: string, afterHint: string }) => {
@@ -113,8 +114,14 @@ export default function GalleryPage() {
             <nav className="fixed w-full z-50 transition-all duration-300 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-white/10">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-24 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-10 h-10 bg-[#1A1A1A] dark:bg-white rounded-full flex items-center justify-center text-white dark:text-[#1A1A1A] transition-transform group-hover:scale-105">
-                            <span className="material-symbols-outlined text-sm" style={{fontVariationSettings: "'FILL' 1"}}>spa</span>
+                        <div className="w-10 h-10 rounded-full flex items-center justify-center transition-transform group-hover:scale-105">
+                            <Image 
+                                src={placeholderData.header.logo.src}
+                                alt="Dra. Sara Sanchez Logo"
+                                width={40}
+                                height={40}
+                                data-ai-hint={placeholderData.header.logo.hint}
+                            />
                         </div>
                         <div className="flex flex-col">
                             <span className="text-sm font-bold tracking-widest uppercase text-[#1A1A1A] dark:text-white">Dra. Sara Sanchez</span>

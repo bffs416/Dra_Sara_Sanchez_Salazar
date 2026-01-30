@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import placeholderData from '@/app/lib/placeholder-images.json';
 
 export function Footer() {
   return (
@@ -7,9 +9,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-16">
           <div className="max-w-xs">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-7 h-7 bg-primary rounded-full flex items-center justify-center text-primary-foreground">
-                <span className="material-symbols-outlined text-xs" style={{fontVariationSettings: "'FILL' 1"}}>spa</span>
-              </div>
+              <Image
+                src={placeholderData.header.logo.src}
+                alt="Dra. Sara Sanchez Logo"
+                width={28}
+                height={28}
+                data-ai-hint={placeholderData.header.logo.hint}
+              />
               <h2 className="text-lg font-bold tracking-tight text-foreground uppercase">Dra. Sara Sanchez</h2>
             </div>
             <p className="text-sm text-foreground/50 leading-relaxed">
