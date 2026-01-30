@@ -2,7 +2,7 @@
 {
   "header": {
     "logo": {
-      "src": "https://picsum.photos/seed/logo/100/100",
+      "src": "/logo.png",
       "hint": "clinic logo"
     }
   },
