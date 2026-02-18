@@ -24,7 +24,6 @@ export default function Home() {
         <BeforeAfterShowcase />
         <Philosophy />
         <MedicalJournal />
-        <Testimonials />
         <Contact />
         <ActionPanel />
       </main>

@@ -299,26 +299,50 @@ export function Procedures() {
     const currentCase = currentService?.cases?.[currentCaseIndex];
 
     const ServiceCard = ({ service, index, globalIndex }: { service: typeof services[0], index: number, globalIndex: number }) => (
-        <div className="card bg-[hsla(var(--card),0.95)] border border-[hsla(var(--accent-soft),0.8)] rounded-[32px] p-10 text-left backdrop-blur-xl shadow-lg transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col cursor-pointer relative overflow-hidden hover:-translate-y-2.5 hover:shadow-2xl hover:border-[var(--accent-procedures)]" onClick={() => openModal(globalIndex)}>
-            <div className="flex justify-between items-start mb-6">
-                <div className="w-16 h-16 bg-[var(--accent-soft)] rounded-[20px] flex items-center justify-center transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] text-[var(--accent-procedures)] group-hover:bg-[var(--accent-procedures)] group-hover:text-white group-hover:rotate-6">
-                    <div className="w-6 h-6">{service.icon}</div>
+        <div
+            className="group bg-white border border-slate-100 rounded-[35px] p-8 md:p-10 text-left shadow-sm hover:shadow-2xl hover:border-accent-gold transition-all duration-500 ease-out flex flex-col cursor-pointer relative overflow-hidden hover:-translate-y-2"
+            onClick={() => openModal(globalIndex)}
+        >
+            {/* Background Accent */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent-gold/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-accent-gold/10 transition-colors duration-500"></div>
+
+            <div className="flex justify-between items-start mb-8 relative z-10">
+                <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center transition-all duration-500 text-accent-gold group-hover:bg-accent-gold group-hover:text-white group-hover:rotate-6 shadow-sm group-hover:shadow-lg">
+                    <div className="w-7 h-7">{service.icon}</div>
                 </div>
-                {service.price && <div className="bg-gray-100 py-1.5 px-3.5 rounded-full text-xs font-bold text-gray-800">{service.price}</div>}
+                {service.price && <div className="bg-slate-900 border border-slate-800 py-2 px-4 rounded-full text-[10px] font-black tracking-widest text-white uppercase shadow-lg transform group-hover:scale-110 transition-transform">Desde {service.price}</div>}
             </div>
-            <h3 className="font-serif text-[1.7rem] mb-3 font-bold text-slate-900">{service.title}</h3>
-            <p className="text-sm leading-6 text-slate-500 mb-5">{service.short}</p>
-            {service.features && (
-                <ul className="m-0 mb-6 p-0 list-none grid grid-cols-1 gap-2.5">
-                    {service.features.map(f => <li key={f} className="text-sm text-slate-600 flex items-center gap-2.5 before:content-['✓'] before:text-[var(--accent-procedures)] before:font-extrabold">{f}</li>)}
-                </ul>
-            )}
-            <div className="mt-auto pt-5 border-t border-gray-100 flex gap-2.5">
-                <span className="text-[0.65rem] uppercase tracking-wider font-bold py-1 px-2.5 bg-gray-50 rounded-md text-slate-500">{service.duration}</span>
-                <span className="text-[0.65rem] uppercase tracking-wider font-bold py-1 px-2.5 bg-gray-50 rounded-md text-slate-500">{service.recovery}</span>
+
+            <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-accent-gold group-hover:animate-pulse transition-all"></div>
+                    <h3 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 group-hover:text-accent-gold transition-colors">{service.title}</h3>
+                </div>
+
+                <p className="text-sm leading-7 text-slate-500 mb-6 line-clamp-2">{service.short}</p>
+
+                {service.features && (
+                    <ul className="m-0 mb-8 p-0 list-none grid grid-cols-1 gap-3">
+                        {service.features.slice(0, 3).map(f => (
+                            <li key={f} className="text-xs font-medium text-slate-600 flex items-center gap-3">
+                                <span className="material-symbols-outlined text-accent-gold text-lg">check_circle</span>
+                                {f}
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
-            <div className="mt-6 text-center w-full py-3.5 rounded-2xl border border-[var(--accent-soft)] text-[var(--accent-procedures)] font-bold text-xs uppercase tracking-wider transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:bg-[var(--accent-procedures)] group-hover:text-white group-hover:border-[var(--accent-procedures)]">
-                Ver Detalles y Resultados
+
+            <div className="mt-auto relative z-10">
+                <div className="pt-6 border-t border-slate-50 flex gap-3 mb-6">
+                    <span className="text-[9px] uppercase tracking-widest font-black py-1.5 px-3 bg-slate-50 rounded-lg text-slate-400 group-hover:bg-accent-gold/10 group-hover:text-accent-gold transition-colors">{service.duration}</span>
+                    <span className="text-[9px] uppercase tracking-widest font-black py-1.5 px-3 bg-slate-50 rounded-lg text-slate-400 group-hover:bg-accent-gold/10 group-hover:text-accent-gold transition-colors font-bold">{service.recovery}</span>
+                </div>
+
+                <div className="w-full py-4 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 font-black text-[10px] uppercase tracking-[0.2em] transition-all duration-500 flex items-center justify-center gap-2 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 group-hover:shadow-xl">
+                    Ver Detalles y Resultados
+                    <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </div>
             </div>
         </div>
     );
@@ -336,28 +360,50 @@ export function Procedures() {
                     <h1 className="font-serif text-6xl font-normal tracking-tight text-slate-900">Nuestros Servicios</h1>
                 </header>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    <div className="rounded-3xl overflow-hidden shadow-lg border border-white/50 aspect-[9/16] max-h-[600px] mx-auto relative group">
-                        <iframe className="w-full h-full" src="https://www.instagram.com/p/C6O1z2_x4M_/embed" title="Clínica Sara Sanchez - Presentación" frameBorder="0" allowTransparency={true} allow="encrypted-media"></iframe>
+
+                {/* Capilar Section */}
+                <div className="mb-24 relative">
+                    <div className="flex flex-col items-center mb-12 text-center">
+                        <div className="w-12 h-12 bg-accent-gold/10 rounded-full flex items-center justify-center text-accent-gold mb-4">
+                            <span className="material-symbols-outlined text-2xl">healing</span>
+                        </div>
+                        <h2 className="serif-title text-4xl md:text-5xl text-slate-900 mb-4">Soluciones Capilares</h2>
+                        <div className="w-24 h-1 bg-accent-gold/20 rounded-full mb-6"></div>
+                        <p className="max-w-xl text-slate-500 text-base leading-relaxed">Expertos en restauración y revitalización folicular con tecnología de vanguardia.</p>
                     </div>
-                    <div className="rounded-3xl overflow-hidden shadow-lg border border-white/50 aspect-[9/16] max-h-[600px] mx-auto relative group">
-                        <iframe className="w-full h-full" src="https://www.instagram.com/p/C5vX1x_x4M_/embed" title="Resultados Implante Capilar" frameBorder="0" allowTransparency={true} allow="encrypted-media"></iframe>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                        {categories.capilar.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
                     </div>
                 </div>
 
-                <h2 className="section-title">Soluciones Capilares</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-                    {categories.capilar.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
+                {/* Facial Section with background tint */}
+                <div className="mb-24 relative py-16 -mx-6 px-6 lg:-mx-20 lg:px-20 bg-slate-50/50 rounded-[60px] border border-slate-100/50 shadow-inner">
+                    <div className="flex flex-col items-center mb-12 text-center">
+                        <div className="w-12 h-12 bg-accent-gold/10 rounded-full flex items-center justify-center text-accent-gold mb-4">
+                            <span className="material-symbols-outlined text-2xl">face</span>
+                        </div>
+                        <h2 className="serif-title text-4xl md:text-5xl text-slate-900 mb-4">Cuidado Facial</h2>
+                        <div className="w-24 h-1 bg-accent-gold/20 rounded-full mb-6"></div>
+                        <p className="max-w-xl text-slate-500 text-base leading-relaxed">Armonización y rejuvenecimiento natural para resaltar la belleza única de cada rostro.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {categories.facial.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
+                    </div>
                 </div>
 
-                <h2 className="section-title">Cuidado Facial</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-                    {categories.facial.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
-                </div>
-
-                <h2 className="section-title">Remodelación Corporal</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-                    {categories.corporal.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
+                {/* Corporal Section */}
+                <div className="mb-24 relative">
+                    <div className="flex flex-col items-center mb-12 text-center">
+                        <div className="w-12 h-12 bg-accent-gold/10 rounded-full flex items-center justify-center text-accent-gold mb-4">
+                            <span className="material-symbols-outlined text-2xl">accessibility_new</span>
+                        </div>
+                        <h2 className="serif-title text-4xl md:text-5xl text-slate-900 mb-4">Remodelación Corporal</h2>
+                        <div className="w-24 h-1 bg-accent-gold/20 rounded-full mb-6"></div>
+                        <p className="max-w-xl text-slate-500 text-base leading-relaxed">Protocolos de alta definición y reafirmación para esculpir tu mejor silueta.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                        {categories.corporal.map((s, i) => <ServiceCard key={s.id} service={s} index={i} globalIndex={services.findIndex(serv => serv.id === s.id)} />)}
+                    </div>
                 </div>
             </div>
 

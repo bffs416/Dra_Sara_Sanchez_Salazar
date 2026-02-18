@@ -18,7 +18,6 @@ export function VideoBanner() {
           className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[2s] ease-out"
           autoPlay
           muted
-          loop
           playsInline
           poster={placeholderData.videoBanner.posterUrl}
         >

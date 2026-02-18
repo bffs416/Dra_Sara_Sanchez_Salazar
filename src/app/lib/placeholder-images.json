@@ -29,9 +29,11 @@
   },
   "beforeAfterShowcase": {
     "featuredVideos": [
-      "https://www.instagram.com/p/C6O1z2_x4M_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      "https://www.instagram.com/p/C5vX1x_x4M_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      "https://www.instagram.com/p/C4iO1x_x4M_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      "https://www.instagram.com/p/DUt0zzTkaZW/",
+      "https://www.instagram.com/p/DHpBPf1RFEl/",
+      "https://www.instagram.com/p/DGMfl6_xSg7/",
+      "https://www.instagram.com/p/DC0AhKQROPY/",
+      "https://www.instagram.com/p/DNy8_oq4kGY/"
     ],
     "cases": [
       {
@@ -46,11 +48,11 @@
       },
       {
         "before": {
-          "src": "/labiospre.png",
+          "src": "/labiospre0.png",
           "hint": "woman portrait"
         },
         "after": {
-          "src": "/labiospost.png",
+          "src": "/labiospost0.png",
           "hint": "woman lips"
         }
       },
@@ -106,11 +108,11 @@
       },
       {
         "before": {
-          "src": "https://picsum.photos/seed/gallery2b/600/750",
+          "src": "labiospre1.png",
           "hint": "lip profile"
         },
         "after": {
-          "src": "https://picsum.photos/seed/gallery2a/600/750",
+          "src": "labiospost1.png",
           "hint": "hydrated lips"
         }
       },
@@ -136,11 +138,11 @@
       },
       {
         "before": {
-          "src": "https://picsum.photos/seed/gallery5b/600/750",
+          "src": "Rinopre0.png",
           "hint": "rhinomodelation"
         },
         "after": {
-          "src": "https://picsum.photos/seed/gallery5a/600/750",
+          "src": "rinopost0.png",
           "hint": "profiled nose"
         }
       },
@@ -193,8 +195,8 @@
         "id": "toxina_botulinica",
         "cases": [
           {
-            "b": "https://picsum.photos/seed/tox1b/600/750",
-            "a": "https://picsum.photos/seed/tox1a/600/750"
+            "b": "Wrinkles0.png",
+            "a": "Wrinkles0.1.png"
           }
         ]
       },
@@ -211,8 +213,8 @@
         "id": "rinomodelacion",
         "cases": [
           {
-            "b": "https://picsum.photos/seed/rino1b/600/750",
-            "a": "https://picsum.photos/seed/rino1a/600/750"
+            "b": "Rinopre.png",
+            "a": "rinopost.png"
           }
         ]
       },
@@ -220,8 +222,8 @@
         "id": "labios",
         "cases": [
           {
-            "b": "https://picsum.photos/seed/lab1b/600/750",
-            "a": "https://picsum.photos/seed/lab1a/600/750"
+            "b": "labiospre.png",
+            "a": "labiospost.png"
           }
         ]
       },
@@ -274,7 +276,7 @@
   },
   "doctorProfile": {
     "clinicSpace": {
-      "src": "https://picsum.photos/seed/clinic/1200/800",
+      "src": "/Dra.png",
       "hint": "modern medical office"
     }
   }

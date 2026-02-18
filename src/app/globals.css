@@ -286,4 +286,15 @@
         transform: translateY(-20px) scale(1.02);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
     }
+
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-350px * 5 - 1.5rem * 5)); }
+    }
+    .animate-marquee {
+        animation: marquee 30s linear infinite;
+    }
+    .animate-marquee:hover {
+        animation-play-state: paused;
+    }
 }

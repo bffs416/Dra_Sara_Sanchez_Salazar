@@ -7,15 +7,15 @@ import placeholderData from '@/app/lib/placeholder-images.json';
 
 const cases = [
     {
-        sectionTitle: `Resultados Científicos, <br><span class="italic font-normal">Cabello Auténtico</span>`,
-        sectionDesc: "Interactúa con nuestra data clínica. Selecciona un caso de implante capilar y explora la diferencia en densidad, diseño de línea frontal y cobertura de coronilla tras el tratamiento.",
-        title: "Implante Capilar Frontal Completo",
-        description: "Paciente 40 años. Recesión marcada en entradas y disminución de densidad frontal. Se realiza implante capilar estratégico con diseño natural de la línea capilar y aumento uniforme de densidad.",
+        sectionTitle: `Estimulación Capilar, <br><span class="italic font-normal">Revitalización Folicular</span>`,
+        sectionDesc: "Protocolos médicos diseñados para frenar la caída y potenciar el grosor del cabello. Resultados visibles mediante terapias de bioestimulación avanzada.",
+        title: "Tratamiento de Estimulación Capilar",
+        description: "Paciente con pérdida de densidad capilar. Se realiza protocolo de estimulación mediante inductores de crecimiento y revitalización, restaurando la salud del cuero cabelludo y el volumen capilar.",
         before: placeholderData.beforeAfterShowcase.cases[0].before.src,
         after: placeholderData.beforeAfterShowcase.cases[0].after.src,
-        recovery: "7-10 Días",
-        durability: "Resultado Permanente",
-        tags: ["Implante Capilar", "Línea Frontal", "Alta Densidad"]
+        recovery: "Inmediata",
+        durability: "Mantenimiento Continuo",
+        tags: ["Estimulación", "Salud Capilar", "Bioestimulación"]
     },
     {
         sectionTitle: `Rejuvenecimiento Facial, <br><span class="italic font-normal">Sutil & Natural</span>`,
@@ -80,23 +80,71 @@ export function BeforeAfterShowcase() {
     return (
         <section className="py-24 bg-card" id="results">
             <div className="max-w-6xl mx-auto px-6">
-                <div className="grid md:grid-cols-3 gap-6 mb-20">
-                    {placeholderData.beforeAfterShowcase.featuredVideos.map((videoUrl, index) => {
-                        const embedUrl = videoUrl.includes('/embed') ? videoUrl : `${videoUrl.split('?')[0]}embed/`;
-                        return (
-                            <div key={index} className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-[9/16] relative group">
-                                <iframe
-                                    className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-                                    src={embedUrl}
-                                    title={`Instagram Video ${index + 1}`}
-                                    frameBorder="0"
-                                    allowTransparency={true}
-                                    allow="encrypted-media"
-                                    scrolling="no">
-                                </iframe>
+                <div className="text-center mb-16">
+                    <span className="text-accent font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Testimonios</span>
+                    <h2 className="serif-title text-4xl text-foreground">Lo que dicen nuestros <span className="text-accent-gold italic">pacientes</span></h2>
+                </div>
+
+                <div className="relative mb-20 overflow-hidden">
+                    <div className="flex gap-6 animate-marquee w-max">
+                        {[...placeholderData.beforeAfterShowcase.featuredVideos, ...placeholderData.beforeAfterShowcase.featuredVideos].map((videoUrl, index) => {
+                            let embedUrl = videoUrl;
+                            if (!videoUrl.includes('/embed')) {
+                                const match = videoUrl.match(/\/(?:p|reel|reels)\/([A-Za-z0-9_-]+)/);
+                                if (match && match[1]) {
+                                    embedUrl = `https://www.instagram.com/reel/${match[1]}/embed/`;
+                                } else {
+                                    embedUrl = `${videoUrl.split('?')[0].replace(/\/$/, '')}/embed/`;
+                                }
+                            }
+                            return (
+                                <div key={index} className="flex-shrink-0 w-[350px] rounded-3xl overflow-hidden shadow-2xl border border-primary/5 aspect-[9/16] relative group bg-black/5">
+                                    <iframe
+                                        className="w-full h-full grayscale-[25%] group-hover:grayscale-0 transition-all duration-700"
+                                        src={embedUrl}
+                                        title={`Instagram Video ${index + 1}`}
+                                        frameBorder="0"
+                                        allow="encrypted-media"
+                                        scrolling="no">
+                                    </iframe>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                {/* Patient Testimonials Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+                    {[
+                        { name: "Santiago M.", comment: "Increíble naturalidad en mi implante FUE. La recuperación fue rapidísima y el diseño de la frente quedó perfecto.", proc: "Implante Capilar", init: "SM" },
+                        { name: "Elena V.", comment: "Mis labios se ven hermosos y super definidos, justo lo que buscaba. Un resultado sutil pero muy elegante.", proc: "Ácido Hialurónico", init: "EV" },
+                        { name: "Ricardo P.", comment: "La marcación mandibular me cambió el perfil por completo. Un nivel de detalle y profesionalismo insuperable.", proc: "Armonización Facial", init: "RP" },
+                        { name: "Laura G.", comment: "Mi cabello dejó de caerse y tiene mucho más brillo con la revitalización capilar. Me siento mucho más segura.", proc: "Revitalización Capilar", init: "LG" },
+                        { name: "Juan C.", comment: "El trato en la clínica es de primera y el resultado de la bioestimulación es genial. Piel más firme y descansada.", proc: "Bioestimulación", init: "JC" },
+                        { name: "Marcela F.", comment: "La rinoplastia sin cirugía fue indolora y el cambio es impresionante. Mi perfil se ve muy armónico ahora.", proc: "Rinomodelación", init: "MF" },
+                        { name: "Carlos T.", comment: "Súper recomendado, la Dra. Sara explica todo con detalle. Resultados visibles desde la segunda sesión capilar.", proc: "Fibrina Capilar", init: "CT" }
+                    ].map((testi, i) => (
+                        <div key={i} className={cn(
+                            "bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow",
+                            i === 6 ? "lg:col-span-2 lg:max-w-md lg:mx-auto" : ""
+                        )}>
+                            <div>
+                                <div className="flex text-accent-gold mb-3">
+                                    {[...Array(5)].map((_, i) => <span key={i} className="material-symbols-outlined text-[14px]">star</span>)}
+                                </div>
+                                <p className="text-slate-600 text-sm leading-relaxed mb-4 italic">"{testi.comment}"</p>
                             </div>
-                        );
-                    })}
+                            <div className="flex items-center gap-3 pt-4 border-t border-slate-50">
+                                <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-[10px] font-bold text-accent-gold border border-white shadow-inner uppercase">
+                                    {testi.init}
+                                </div>
+                                <div>
+                                    <h4 className="text-[11px] font-bold text-slate-900 uppercase tracking-wider">{testi.name}</h4>
+                                    <span className="text-[9px] text-slate-400 uppercase tracking-widest">{testi.proc}</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
@@ -108,17 +156,28 @@ export function BeforeAfterShowcase() {
                             {currentCase.sectionDesc}
                         </p>
                     </div>
-                    <div className="flex gap-2 md:gap-4 flex-wrap">
+                    <div className="flex gap-4 md:gap-6 flex-wrap">
                         {cases.map((_c, index) => (
                             <button
                                 key={index}
                                 onClick={() => setActiveCaseIndex(index)}
                                 className={cn(
-                                    "case-selector border border-primary/10 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-primary-foreground transition-all",
-                                    activeCaseIndex === index ? 'bg-primary text-primary-foreground' : 'bg-card text-primary'
+                                    "relative px-8 py-3 rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-500 overflow-hidden group",
+                                    activeCaseIndex === index
+                                        ? 'bg-slate-900 text-white shadow-xl scale-105 border-transparent'
+                                        : 'bg-white text-slate-500 border border-slate-200 hover:border-accent-gold hover:text-accent-gold shadow-sm'
                                 )}
                             >
-                                {index === 0 ? "Implante Capilar" : index === 1 ? "Rejuvenecimiento Facial" : "Armonización Facial"}
+                                <span className="relative z-10 flex items-center gap-3">
+                                    <span className={cn(
+                                        "w-2 h-2 rounded-full transition-all duration-500",
+                                        activeCaseIndex === index ? 'bg-accent-gold animate-pulse' : 'bg-slate-200 group-hover:bg-accent-gold'
+                                    )}></span>
+                                    {index === 0 ? "Estimulación Capilar" : index === 1 ? "Rejuvenecimiento Facial" : "Armonización Facial"}
+                                </span>
+                                {activeCaseIndex === index && (
+                                    <div className="absolute inset-0 bg-gradient-to-r from-accent-gold/20 to-transparent opacity-50"></div>
+                                )}
                             </button>
                         ))}
                     </div>

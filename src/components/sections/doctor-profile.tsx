@@ -41,18 +41,26 @@ export function DoctorProfile() {
                 <div className="grid lg:grid-cols-2 gap-16 items-start">
                     {/* Left Column: Visuals & General Info */}
                     <div className="space-y-12">
-                        <div>
-                            <span className="text-accent-gold font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Perfil Profesional</span>
-                            <h2 className="serif-title text-5xl text-slate-900 leading-tight mb-6">
-                                Dra. Sara <br />Sánchez Salazar
-                            </h2>
-                            <div className="flex flex-wrap gap-4 mb-8">
-                                <span className="px-4 py-2 bg-white rounded-full border border-slate-200 text-slate-600 text-sm font-medium shadow-sm">Revitalización Capilar</span>
-                                <span className="px-4 py-2 bg-white rounded-full border border-slate-200 text-slate-600 text-sm font-medium shadow-sm">Medicina Estética</span>
-                                <span className="px-4 py-2 bg-white rounded-full border border-slate-200 text-slate-600 text-sm font-medium shadow-sm">Prevención & Rejuvenecimiento</span>
+                        <div className="relative">
+                            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 bg-accent-gold/5 rounded-full border border-accent-gold/10 mb-6 group cursor-default">
+                                <span className="w-1.5 h-1.5 rounded-full bg-accent-gold animate-pulse"></span>
+                                <span className="text-accent-gold font-bold tracking-[0.25em] uppercase text-[9px]">Excelencia Médica</span>
                             </div>
-                            <p className="text-slate-600 text-lg leading-relaxed max-w-xl">
-                                Médica especialista con una sólida formación certificada, con enfoque primordial en la <strong>revitalización capilar</strong> y procedimientos de medicina estética avanzada para armonizar rostro y cuerpo.
+
+                            <h2 className="serif-title text-5xl md:text-6xl text-slate-900 leading-[1.1] mb-8 relative max-w-md">
+                                Dra. <span className="text-slate-900 font-medium">Sara Sánchez</span>
+                                <span className="text-accent-gold italic font-normal block mt-1">Salazar</span>
+                                <div className="w-12 h-[2px] bg-accent-gold/30 mt-6 rounded-full"></div>
+                            </h2>
+
+                            <div className="flex flex-wrap gap-2.5 mb-10">
+                                <span className="px-4 py-2 bg-white text-slate-500 border border-slate-100 rounded-xl text-[9px] font-black uppercase tracking-[0.15em] shadow-sm hover:border-accent-gold hover:text-accent-gold transition-all cursor-default">Revitalización Capilar</span>
+                                <span className="px-4 py-2 bg-white text-slate-500 border border-slate-100 rounded-xl text-[9px] font-black uppercase tracking-[0.15em] shadow-sm hover:border-accent-gold hover:text-accent-gold transition-all cursor-default">Medicina Estética</span>
+                                <span className="px-4 py-2 bg-white text-slate-500 border border-slate-100 rounded-xl text-[9px] font-black uppercase tracking-[0.15em] shadow-sm hover:border-accent-gold hover:text-accent-gold transition-all cursor-default">Armonización</span>
+                            </div>
+
+                            <p className="text-slate-600 text-lg leading-relaxed max-w-xl relative z-10 italic font-serif border-l-2 border-accent-gold/10 pl-6">
+                                "Mi enfoque une la revitalización capilar avanzada con la medicina estética basada en criterio médico. Buscamos resultados que acompañen el proceso natural del tiempo con seguridad."
                             </p>
                         </div>
 
