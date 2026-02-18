@@ -17,7 +17,7 @@ export function Contact() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Teléfono</label>
-                  <input type="tel" className="w-full bg-secondary/30 border-0 border-b-2 border-border focus:border-accent-gold focus:ring-0 px-0 py-3 transition-colors text-foreground dark:bg-transparent" placeholder="+57 300 000 0000" />
+                  <input type="tel" className="w-full bg-secondary/30 border-0 border-b-2 border-border focus:border-accent-gold focus:ring-0 px-0 py-3 transition-colors text-foreground dark:bg-transparent" placeholder="+57 302 3674189" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Interés</label>
@@ -33,10 +33,12 @@ export function Contact() {
                   <textarea rows={3} className="w-full bg-secondary/30 border-0 border-b-2 border-border focus:border-accent-gold focus:ring-0 px-0 py-3 transition-colors text-foreground dark:bg-transparent resize-none" placeholder="Cuéntenos sus objetivos..."></textarea>
                 </div>
               </div>
-              <button type="button" className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-primary/90 transition-all flex justify-center items-center gap-2 group mt-4">
-                Solicitar Cita
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </button>
+              <a href="https://wa.me/573023674189" target="_blank" rel="noopener noreferrer" className="block w-full mt-4">
+                <button type="button" className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-primary/90 transition-all flex justify-center items-center gap-2 group">
+                  Solicitar Cita
+                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+              </a>
             </form>
           </div>
 
@@ -72,7 +74,7 @@ export function Contact() {
                 <span className="material-symbols-outlined text-accent-gold text-3xl">mark_email_read</span>
                 <div>
                   <h4 className="font-bold text-foreground">Contacto Directo</h4>
-                  <p className="text-sm text-muted-foreground">+57 300 000 0000<br />citas@drasarasanchez.com</p>
+                  <p className="text-sm text-muted-foreground">+57 302 3674189<br />citas@drasarasanchez.com</p>
                 </div>
               </div>
             </div>

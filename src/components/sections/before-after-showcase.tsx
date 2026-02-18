@@ -81,17 +81,22 @@ export function BeforeAfterShowcase() {
         <section className="py-24 bg-card" id="results">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="grid md:grid-cols-3 gap-6 mb-20">
-                    {placeholderData.beforeAfterShowcase.featuredVideos.map((videoSrc, index) => (
-                         <div key={index} className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-video relative group">
-                            <iframe
-                                className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-                                src={videoSrc} title={`Video ${index + 1}`}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen>
-                            </iframe>
-                        </div>
-                    ))}
+                    {placeholderData.beforeAfterShowcase.featuredVideos.map((videoUrl, index) => {
+                        const embedUrl = videoUrl.includes('/embed') ? videoUrl : `${videoUrl.split('?')[0]}embed/`;
+                        return (
+                            <div key={index} className="rounded-2xl overflow-hidden shadow-lg border border-primary/5 aspect-[9/16] relative group">
+                                <iframe
+                                    className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                                    src={embedUrl}
+                                    title={`Instagram Video ${index + 1}`}
+                                    frameBorder="0"
+                                    allowTransparency={true}
+                                    allow="encrypted-media"
+                                    scrolling="no">
+                                </iframe>
+                            </div>
+                        );
+                    })}
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
@@ -122,13 +127,13 @@ export function BeforeAfterShowcase() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <div className="lg:col-span-7">
                         <div ref={containerRef} className="analysis-container relative aspect-[4/3] rounded-2xl bg-secondary shadow-2xl overflow-hidden group">
-                            <div 
-                                className="absolute inset-0 bg-cover bg-center grayscale-[20%]" 
+                            <div
+                                className="absolute inset-0 bg-cover bg-center grayscale-[20%]"
                                 style={{ backgroundImage: `url(${currentCase.before})` }}
                                 data-ai-hint={placeholderData.beforeAfterShowcase.cases[activeCaseIndex].before.hint}
                             />
-                            <div 
-                                className="after-overlay" 
+                            <div
+                                className="after-overlay"
                                 style={{ backgroundImage: `url(${currentCase.after})` }}
                                 data-ai-hint={placeholderData.beforeAfterShowcase.cases[activeCaseIndex].after.hint}
                             ></div>

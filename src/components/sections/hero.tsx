@@ -9,9 +9,9 @@ export function Hero() {
         <div className="relative order-2 md:order-1">
           <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary rounded-full -z-10"></div>
           <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-secondary">
-            <Image 
-              alt="Professional medical portrait of Dr. Sara Sanchez" 
-              className="grayscale hover:grayscale-0 transition-all duration-700 object-cover" 
+            <Image
+              alt="Professional medical portrait of Dr. Sara Sanchez"
+              className="grayscale hover:grayscale-0 transition-all duration-700 object-cover"
               src={placeholderData.hero.doctorPortrait.src}
               width={800}
               height={1000}
@@ -29,25 +29,24 @@ export function Hero() {
         <div className="flex flex-col gap-8 order-1 md:order-2">
           <div className="space-y-4">
             <span className="text-accent font-bold text-sm tracking-[0.3em] uppercase block">
-              Implante Capilar · Resultados Naturales
+              Revitalización Capilar · Medicina Estética · Rejuvenecimiento
             </span>
             <h2 className="serif-title text-5xl md:text-6xl font-bold leading-[1.1] text-foreground">
-              Recuperar tu cabello es una decisión <span className="text-accent-gold">inteligente.</span>
+              Tu cabello y tu piel merecen una <span className="text-accent-gold">decisión inteligente.</span>
             </h2>
             <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-lg">
-              Especialista en implante capilar y medicina estética avanzada. Tratamientos personalizados para
-              recuperar densidad capilar y, cuando lo necesitas, complementar con procedimientos faciales para
-              armonizar tu imagen con resultados naturales y seguros.
+              Dra. Sara Sánchez Salazar, experta en <strong>revitalización capilar avanzada</strong> y medicina estética.
+              Enfoque médico basado en ciencia para acompañar tu proceso natural de rejuvenecimiento con criterio y seguridad.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-primary text-primary-foreground h-14 px-10 rounded-lg font-bold text-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group">
+            <a href="https://wa.me/573023674189" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-foreground h-14 px-10 rounded-lg font-bold text-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group">
               Agendar Cita
               <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
-            </button>
-            <button className="border-2 border-primary text-primary h-14 px-10 rounded-lg font-bold text-lg hover:bg-primary/5 transition-all">
+            </a>
+            <a href="https://wa.me/573023674189" target="_blank" rel="noopener noreferrer" className="border-2 border-primary text-primary h-14 px-10 rounded-lg font-bold text-lg hover:bg-primary/5 transition-all flex items-center justify-center">
               Ver Catálogo
-            </button>
+            </a>
           </div>
         </div>
       </div>

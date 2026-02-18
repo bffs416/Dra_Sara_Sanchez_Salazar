@@ -1,4 +1,3 @@
-
 {
   "header": {
     "logo": {
@@ -30,9 +29,9 @@
   },
   "beforeAfterShowcase": {
     "featuredVideos": [
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder1",
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder2",
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder3"
+      "https://www.instagram.com/p/C6O1z2_x4M_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "https://www.instagram.com/p/C5vX1x_x4M_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "https://www.instagram.com/p/C4iO1x_x4M_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     ],
     "cases": [
       {
@@ -159,22 +158,124 @@
   },
   "procedures": {
     "services": [
-        { "id": "implante", "cases": [
-            { "b": "https://picsum.photos/seed/proc1b/600/750", "a": "https://picsum.photos/seed/proc1a/600/750" },
-            { "b": "https://picsum.photos/seed/proc2b/600/750", "a": "https://picsum.photos/seed/proc2a/600/750" }
-        ]},
-        { "id": "meso_capilar", "cases": [
-            { "b": "https://picsum.photos/seed/proc3b/600/750", "a": "https://picsum.photos/seed/proc3a/600/750" }
-        ]},
-        { "id": "hialuronico", "cases": [
-            { "b": "https://picsum.photos/seed/proc4b/600/750", "a": "https://picsum.photos/seed/proc4a/600/750" }
-        ]},
-        { "id": "botox", "cases": [
-            { "b": "https://picsum.photos/seed/proc5b/600/750", "a": "https://picsum.photos/seed/proc5a/600/750" }
-        ]},
-        { "id": "criolipolisis", "cases": [
-            { "b": "https://picsum.photos/seed/proc6b/600/750", "a": "https://picsum.photos/seed/proc6a/600/750" }
-        ]}
+      {
+        "id": "trasplante_capilar",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/tc1b/600/750",
+            "a": "https://picsum.photos/seed/tc1a/600/750"
+          },
+          {
+            "b": "https://picsum.photos/seed/tc2b/600/750",
+            "a": "https://picsum.photos/seed/tc2a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "tratamientos_capilares",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/tr1b/600/750",
+            "a": "https://picsum.photos/seed/tr1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "facial_profunda",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/fac1b/600/750",
+            "a": "https://picsum.photos/seed/fac1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "toxina_botulinica",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/tox1b/600/750",
+            "a": "https://picsum.photos/seed/tox1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "skinbooster_toxina",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/sb1b/600/750",
+            "a": "https://picsum.photos/seed/sb1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "rinomodelacion",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/rino1b/600/750",
+            "a": "https://picsum.photos/seed/rino1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "labios",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/lab1b/600/750",
+            "a": "https://picsum.photos/seed/lab1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "glowon_hit",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/hit1b/600/750",
+            "a": "https://picsum.photos/seed/hit1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "endolaser",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/endo1b/600/750",
+            "a": "https://picsum.photos/seed/endo1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "gluteos_up",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/glu1b/600/750",
+            "a": "https://picsum.photos/seed/glu1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "lipoescultura",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/lipo1b/600/750",
+            "a": "https://picsum.photos/seed/lipo1a/600/750"
+          }
+        ]
+      },
+      {
+        "id": "lipopapada",
+        "cases": [
+          {
+            "b": "https://picsum.photos/seed/pap1b/600/750",
+            "a": "https://picsum.photos/seed/pap1a/600/750"
+          }
+        ]
+      }
     ]
+  },
+  "doctorProfile": {
+    "clinicSpace": {
+      "src": "https://picsum.photos/seed/clinic/1200/800",
+      "hint": "modern medical office"
+    }
   }
 }
