@@ -76,14 +76,14 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-display);
+    font-family: var(--font-sans), system-ui, sans-serif;
   }
 }
 
 @layer utilities {
     .serif-title,
     .serif-heading {
-        font-family: var(--font-serif);
+        font-family: var(--font-serif), serif;
     }
     .analysis-container {
         position: relative;
@@ -149,7 +149,7 @@
         color: var(--text-main);
         position: relative;
         overflow: hidden;
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display), sans-serif;
         padding-top: 6rem;
         padding-bottom: 6rem;
     }

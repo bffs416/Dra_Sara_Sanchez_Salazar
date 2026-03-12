@@ -2,8 +2,64 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import placeholderData from '@/app/lib/placeholder-images.json';
+
+const InstagramReel = ({ videoUrl, index }: { videoUrl: string, index: number }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsLoaded(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: '200px' }
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    let embedUrl = videoUrl;
+    if (!videoUrl.includes('/embed')) {
+        const match = videoUrl.match(/\/(?:p|reel|reels)\/([A-Za-z0-9_-]+)/);
+        if (match && match[1]) {
+            embedUrl = `https://www.instagram.com/reel/${match[1]}/embed/`;
+        } else {
+            embedUrl = `${videoUrl.split('?')[0].replace(/\/$/, '')}/embed/`;
+        }
+    }
+
+    return (
+        <div ref={containerRef} className="flex-shrink-0 w-[350px] rounded-3xl overflow-hidden shadow-2xl border border-primary/5 aspect-[9/16] relative group bg-slate-100">
+            {isLoaded ? (
+                <iframe
+                    className="w-full h-full grayscale-[25%] group-hover:grayscale-0 transition-all duration-700"
+                    src={embedUrl}
+                    title={`Instagram Video ${index + 1}`}
+                    frameBorder="0"
+                    allow="encrypted-media"
+                    scrolling="no">
+                </iframe>
+            ) : (
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-slate-200">
+                    <div className="w-16 h-16 rounded-full bg-white/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+                        <span className="material-symbols-outlined text-accent-gold text-3xl">play_circle</span>
+                    </div>
+                    <span className="mt-4 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-400">Cargando Reel...</span>
+                </div>
+            )}
+        </div>
+    );
+};
 
 const cases = [
     {
@@ -89,29 +145,9 @@ export function BeforeAfterShowcase() {
 
                     <div className="relative mb-20 overflow-hidden">
                         <div className="flex gap-6 animate-marquee w-max">
-                            {[...placeholderData.beforeAfterShowcase.featuredVideos, ...placeholderData.beforeAfterShowcase.featuredVideos].map((videoUrl, index) => {
-                                let embedUrl = videoUrl;
-                                if (!videoUrl.includes('/embed')) {
-                                    const match = videoUrl.match(/\/(?:p|reel|reels)\/([A-Za-z0-9_-]+)/);
-                                    if (match && match[1]) {
-                                        embedUrl = `https://www.instagram.com/reel/${match[1]}/embed/`;
-                                    } else {
-                                        embedUrl = `${videoUrl.split('?')[0].replace(/\/$/, '')}/embed/`;
-                                    }
-                                }
-                                return (
-                                    <div key={index} className="flex-shrink-0 w-[350px] rounded-3xl overflow-hidden shadow-2xl border border-primary/5 aspect-[9/16] relative group bg-black/5">
-                                        <iframe
-                                            className="w-full h-full grayscale-[25%] group-hover:grayscale-0 transition-all duration-700"
-                                            src={embedUrl}
-                                            title={`Instagram Video ${index + 1}`}
-                                            frameBorder="0"
-                                            allow="encrypted-media"
-                                            scrolling="no">
-                                        </iframe>
-                                    </div>
-                                );
-                            })}
+                            {[...placeholderData.beforeAfterShowcase.featuredVideos, ...placeholderData.beforeAfterShowcase.featuredVideos].map((videoUrl, index) => (
+                                <InstagramReel key={index} videoUrl={videoUrl} index={index} />
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -201,16 +237,24 @@ export function BeforeAfterShowcase() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div className="lg:col-span-7">
                             <div ref={containerRef} className="analysis-container relative aspect-[4/3] rounded-2xl bg-secondary shadow-2xl overflow-hidden group">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center grayscale-[20%]"
-                                    style={{ backgroundImage: `url(${currentCase.before})` }}
-                                    data-ai-hint={placeholderData.beforeAfterShowcase.cases[activeCaseIndex].before.hint}
-                                />
-                                <div
-                                    className="after-overlay"
-                                    style={{ backgroundImage: `url(${currentCase.after})` }}
-                                    data-ai-hint={placeholderData.beforeAfterShowcase.cases[activeCaseIndex].after.hint}
-                                ></div>
+                                <div className="absolute inset-0 grayscale-[20%]">
+                                    <Image
+                                        src={currentCase.before}
+                                        alt="Antes"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 1024px) 100vw, 60vw"
+                                    />
+                                </div>
+                                <div className="after-overlay absolute inset-0 z-20">
+                                    <Image
+                                        src={currentCase.after}
+                                        alt="Después"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 1024px) 100vw, 60vw"
+                                    />
+                                </div>
                                 <div className="lens-ring">
                                     <span className="lens-ui">Analizando Restauración</span>
                                     <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full mb-2">

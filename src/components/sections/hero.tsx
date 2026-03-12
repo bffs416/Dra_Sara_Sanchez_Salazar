@@ -15,6 +15,7 @@ export function Hero() {
               src={placeholderData.hero.doctorPortrait.src}
               width={800}
               height={1000}
+              priority
               data-ai-hint={placeholderData.hero.doctorPortrait.hint}
             />
           </div>
