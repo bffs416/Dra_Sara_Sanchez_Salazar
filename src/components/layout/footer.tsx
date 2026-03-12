@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import placeholderData from '@/app/lib/placeholder-images.json';
+import { LegalModals } from './legal-modals';
 
 export function Footer() {
+  const [activeModal, setActiveModal] = useState<'privacy' | 'legal' | 'terms' | null>(null);
+
   return (
     <footer className="relative overflow-hidden">
       {/* Full-width dark background matching contact section */}
@@ -32,7 +36,7 @@ export function Footer() {
                 <h4 className="font-bold text-[10px] uppercase tracking-widest mb-8 text-accent-gold">Clínica</h4>
                 <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
                   <li><Link href="/#servicios" className="hover:text-white transition-colors">Tratamientos</Link></li>
-                  <li><Link href="/#philosophy" className="hover:text-white transition-colors">Filosofía</Link></li>
+                  <li><Link href="/dra-sara" className="hover:text-white transition-colors">Sobre Mí</Link></li>
                   <li><Link href="/gallery" className="hover:text-white transition-colors">Galería</Link></li>
                 </ul>
               </div>
@@ -47,16 +51,15 @@ export function Footer() {
               <div>
                 <h4 className="font-bold text-[10px] uppercase tracking-widest mb-8 text-accent-gold">Legal</h4>
                 <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
-                  <li><Link href="#" className="hover:text-white transition-colors">Privacidad</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">Aviso Legal</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">Condiciones</Link></li>
+                  <li><button onClick={() => setActiveModal('privacy')} className="hover:text-white transition-colors uppercase text-left">Privacidad</button></li>
+                  <li><button onClick={() => setActiveModal('legal')} className="hover:text-white transition-colors uppercase text-left">Aviso Legal</button></li>
+                  <li><button onClick={() => setActiveModal('terms')} className="hover:text-white transition-colors uppercase text-left">Condiciones</button></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-[10px] uppercase tracking-widest mb-8 text-accent-gold">Contacto</h4>
                 <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
-                  <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
+                  <li><a href="https://www.instagram.com/dra_sarasanchezsalazar/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
                   <li><a href="https://wa.me/573023674189" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WhatsApp</a></li>
                 </ul>
               </div>
@@ -72,6 +75,8 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      <LegalModals openType={activeModal} onClose={() => setActiveModal(null)} />
     </footer>
   );
 }
