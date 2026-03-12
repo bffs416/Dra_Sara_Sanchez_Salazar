@@ -25,31 +25,31 @@ const categoryConfig: Record<CatKey, { label: string; icon: string; subtitle: st
         label: "Ácido Hialurónico",
         icon: "water_drop",
         subtitle: "Rellenos, hidratación y armonización facial.",
-        color: "from-blue-50 to-indigo-50",
+        color: "from-white to-slate-50",
     },
     facial: {
         label: "Cuidado Facial",
         icon: "face",
         subtitle: "Rejuvenecimiento y tratamientos avanzados.",
-        color: "from-rose-50 to-pink-50",
+        color: "from-white to-slate-50",
     },
     capilar: {
         label: "Soluciones Capilares",
         icon: "healing",
         subtitle: "Restauración y revitalización folicular.",
-        color: "from-amber-50 to-yellow-50",
+        color: "from-white to-slate-50",
     },
     corporal: {
         label: "Remodelación Corporal",
         icon: "accessibility_new",
         subtitle: "Protocolos para esculpir tu mejor silueta.",
-        color: "from-emerald-50 to-teal-50",
+        color: "from-white to-slate-50",
     },
     sueroterapia: {
         label: "Sueroterapia",
         icon: "vaccines",
         subtitle: "Terapias intravenosas para salud y bienestar.",
-        color: "from-violet-50 to-purple-50",
+        color: "from-white to-slate-50",
     },
 };
 
