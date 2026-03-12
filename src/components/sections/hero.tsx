@@ -44,8 +44,8 @@ export function Hero() {
               Agendar Cita
               <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
             </a>
-            <a href="https://wa.me/573023674189" target="_blank" rel="noopener noreferrer" className="border-2 border-primary text-primary h-14 px-10 rounded-lg font-bold text-lg hover:bg-primary/5 transition-all flex items-center justify-center">
-              Ver Catálogo
+            <a href="#servicios" className="border-2 border-primary text-primary h-14 px-10 rounded-lg font-bold text-lg hover:bg-primary/5 transition-all flex items-center justify-center">
+              Ver Servicios
             </a>
           </div>
         </div>

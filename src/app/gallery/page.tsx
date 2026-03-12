@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
 import Image from 'next/image';
 import placeholderData from '@/app/lib/placeholder-images.json';
 
@@ -56,8 +57,8 @@ const GalleryCard = ({ before, after, title, description, tags, delay, beforeHin
           <span className="material-symbols-outlined text-white drop-shadow-md">touch_app</span>
         </div>
       </div>
-      <h3 className="serif-heading text-2xl text-[#1A1A1A] dark:text-white mb-2">{title}</h3>
-      <p className="text-sm text-[#1A1A1A]/60 dark:text-gray-400 mb-3 line-clamp-2">{description}</p>
+      <h3 className="serif-heading text-2xl text-foreground mb-2">{title}</h3>
+      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{description}</p>
       <div className="flex gap-2">
         {tags.map((tag) => (
           <span key={tag} className="text-[10px] uppercase font-bold text-accent-gold border border-accent-gold/20 px-2 py-1 rounded">{tag}</span>
@@ -109,62 +110,40 @@ const galleryCases = [
 
 export default function GalleryPage() {
     return (
-        <div className="bg-[#FAFAFA] dark:bg-[#121212] text-[#1A1A1A] dark:text-gray-200 font-sans antialiased selection:bg-accent-plum/20 gallery-page">
+        <>
+            <Header />
+            <main className="flex-1">
+                <header className="pt-40 pb-20 px-6 bg-card">
+                    <div className="max-w-6xl mx-auto text-center fade-in">
+                        <span className="text-accent-gold font-bold tracking-[0.3em] text-[10px] uppercase mb-6 block">Portfolio Clínico</span>
+                        <h1 className="serif-heading text-5xl md:text-7xl text-foreground leading-tight mb-8">
+                            Galería de <span className="italic font-normal text-accent">Transformaciones</span>
+                        </h1>
+                        <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                            Resultados reales que respetan la anatomía y potencian la belleza natural de cada paciente. Mueve el cursor para revelar los detalles.
+                        </p>
+                    </div>
+                </header>
 
-            <nav className="fixed w-full z-50 transition-all duration-300 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-white/10">
-                <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-24 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-10 h-10 rounded-full flex items-center justify-center transition-transform group-hover:scale-105">
-                            <Image 
-                                src={placeholderData.header.logo.src}
-                                alt="Dra. Sara Sanchez Logo"
-                                width={40}
-                                height={40}
-                                data-ai-hint={placeholderData.header.logo.hint}
-                            />
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-sm font-bold tracking-widest uppercase text-[#1A1A1A] dark:text-white">Dra. Sara Sanchez</span>
-                            <span className="text-[10px] tracking-widest uppercase text-[#1A1A1A]/50 dark:text-gray-400">Medicina Estética</span>
-                        </div>
-                    </Link>
-                    <Link href="/" className="text-xs font-bold uppercase tracking-widest hover:text-accent-gold transition-colors">Volver al Inicio</Link>
-                </div>
-            </nav>
-
-            <header className="pt-40 pb-20 px-6">
-                <div className="max-w-6xl mx-auto text-center fade-in">
-                    <span className="text-accent-gold font-bold tracking-[0.3em] text-[10px] uppercase mb-6 block">Portfolio Clínico</span>
-                    <h1 className="serif-heading text-5xl md:text-7xl text-[#1A1A1A] dark:text-white leading-tight mb-8">
-                        Galería de <span className="italic font-normal text-accent">Transformaciones</span>
-                    </h1>
-                    <p className="text-xl text-[#1A1A1A]/60 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                        Resultados reales que respetan la anatomía y potencian la belleza natural de cada paciente. Mueve el cursor para revelar los detalles.
-                    </p>
-                </div>
-            </header>
-
-            <main className="pb-32 px-6">
-                <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {galleryCases.map((item, index) => (
-                       <GalleryCard 
-                            key={index}
-                            before={placeholderData.gallery.cases[index].before.src}
-                            after={placeholderData.gallery.cases[index].after.src}
-                            beforeHint={placeholderData.gallery.cases[index].before.hint}
-                            afterHint={placeholderData.gallery.cases[index].after.hint}
-                            title={item.title}
-                            description={item.description}
-                            tags={item.tags}
-                            delay={item.delay}
-                       />
-                    ))}
-                </div>
+                <section className="pb-32 px-6 pt-16 bg-background gallery-page">
+                    <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {galleryCases.map((item, index) => (
+                           <GalleryCard 
+                                key={index}
+                                before={placeholderData.gallery.cases[index].before.src}
+                                after={placeholderData.gallery.cases[index].after.src}
+                                beforeHint={placeholderData.gallery.cases[index].before.hint}
+                                afterHint={placeholderData.gallery.cases[index].after.hint}
+                                title={item.title}
+                                description={item.description}
+                                tags={item.tags}
+                                delay={item.delay}
+                           />
+                        ))}
+                    </div>
+                </section>
             </main>
-
-            <footer className="py-12 border-t border-pearl-gray dark:border-gray-800 text-center">
-                <p className="text-[10px] uppercase tracking-widest font-bold text-[#1A1A1A]/30">© {new Date().getFullYear()} Dra. Sara Sanchez Medical Clinic. All Rights Reserved.</p>
-            </footer>
-        </div>
+            <Footer />
+        </>
     );
 }

@@ -3,8 +3,13 @@ import placeholderData from '@/app/lib/placeholder-images.json';
 
 const certifications = [
     {
+        title: "Universidad Remington",
+        desc: "Médica egresada. Mención de Honor de la Academia de Medicina de Antioquia 2010.",
+        institution: "Universidad"
+    },
+    {
         title: "ACICME (Asociación Científica Colombiana de Medicina Estética)",
-        desc: "Certificado de Excelencia Académica durante el XII Curso Superior de Medicina Estética.",
+        desc: "Formación en Estética Médica. Certificado de Excelencia Académica durante el XII Curso Superior de Medicina Estética.",
         institution: "ACICME"
     },
     {
@@ -31,6 +36,7 @@ const certifications = [
 
 const affiliations = [
     { name: "ACICME", handle: "@acicmecolombia", full: "Asociación Científica Colombiana de Medicina Estética" },
+    { name: "ASMECAP", handle: "Secretaria", full: "Asociación Médica Colombiana de Restauración Capilar" },
     { name: "SIRF Sociedad", handle: null, full: "Sociedad de Medicina Estética" }
 ];
 
@@ -71,7 +77,7 @@ export function DoctorProfile() {
                                     <span className="font-bold text-sm uppercase tracking-wider">Ubicación</span>
                                 </div>
                                 <p className="text-slate-700 text-sm leading-relaxed">
-                                    Calle 16 Aa sur # 42-91, Edificio Campestre 16.43, Medellín, Antioquia
+                                    Calle 16 AA Sur # 42-91, Edificio Campestre 16.43, Oficina 210-211. Sector Campestre, El Poblado — Medellín, Antioquia
                                 </p>
                             </div>
                             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
