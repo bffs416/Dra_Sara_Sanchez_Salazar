@@ -18,7 +18,7 @@ export function Hero() {
               data-ai-hint={placeholderData.hero.doctorPortrait.hint}
             />
           </div>
-          <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-xl border max-w-[240px]">
+          <div className="absolute -bottom-4 right-0 md:-bottom-6 md:-right-6 bg-card p-6 rounded-xl shadow-xl border max-w-[240px]">
             <div className="flex items-center gap-2 mb-2">
               <span className="material-symbols-outlined text-accent-gold">verified</span>
               <span className="text-xs font-bold uppercase tracking-widest text-accent-gold">Certificada</span>

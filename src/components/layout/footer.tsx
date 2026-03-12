@@ -27,7 +27,7 @@ export function Footer() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-12">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-12">
               <div>
                 <h4 className="font-bold text-[10px] uppercase tracking-widest mb-8 text-accent-gold">Clínica</h4>
                 <ul className="space-y-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
